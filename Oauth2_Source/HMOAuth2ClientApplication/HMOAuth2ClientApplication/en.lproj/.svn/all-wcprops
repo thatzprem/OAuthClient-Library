@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2ClientApplication/en.lproj
+END
+InfoPlist.strings
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2ClientApplication/en.lproj/InfoPlist.strings
+END
+ViewController_iPhone.xib
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2ClientApplication/en.lproj/ViewController_iPhone.xib
+END
+ViewController_iPad.xib
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2ClientApplication/en.lproj/ViewController_iPad.xib
+END

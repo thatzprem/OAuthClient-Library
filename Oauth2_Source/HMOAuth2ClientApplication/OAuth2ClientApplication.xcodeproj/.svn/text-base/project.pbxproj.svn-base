@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B149A14172D06110021B797 /* HMOAuthConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B149A13172D06110021B797 /* HMOAuthConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B28DB3B17393A2E009CBCC1 /* HMOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B28DB3A17393A2E009CBCC1 /* HMOAuth2ClientConfig.plist */; };
+		3B3BD7161728EB9D008D53DB /* HMLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3BD7131728EB9D008D53DB /* HMLogManager.h */; };
+		3B3BD7171728EB9D008D53DB /* libHMLoggerDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3BD7141728EB9D008D53DB /* libHMLoggerDebug.a */; };
+		3B3BD7181728EB9D008D53DB /* libHMLoggerDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3BD7141728EB9D008D53DB /* libHMLoggerDebug.a */; };
+		3B3BD7191728EB9D008D53DB /* libHMLoggerRelease.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3BD7151728EB9D008D53DB /* libHMLoggerRelease.a */; };
+		3B3BD71A1728EB9D008D53DB /* libHMLoggerRelease.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3BD7151728EB9D008D53DB /* libHMLoggerRelease.a */; };
+		3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */; };
+		3B502A86172143A30036CEED /* OAuth2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA537172003F900D71469 /* OAuth2Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B5362A3172F9A520054D967 /* PlistHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5362A1172F9A520054D967 /* PlistHelper.h */; };
+		3B5362A4172F9A520054D967 /* PlistHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5362A2172F9A520054D967 /* PlistHelper.m */; };
+		3B7FA4FF172000A100D71469 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA4FE172000A100D71469 /* UIKit.framework */; };
+		3B7FA501172000A100D71469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA500172000A100D71469 /* Foundation.framework */; };
+		3B7FA503172000A100D71469 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA502172000A100D71469 /* CoreGraphics.framework */; };
+		3B7FA509172000A100D71469 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA507172000A100D71469 /* InfoPlist.strings */; };
+		3B7FA50B172000A100D71469 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA50A172000A100D71469 /* main.m */; };
+		3B7FA50F172000A100D71469 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA50E172000A100D71469 /* AppDelegate.m */; };
+		3B7FA511172000A100D71469 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA510172000A100D71469 /* Default.png */; };
+		3B7FA513172000A100D71469 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA512172000A100D71469 /* Default@2x.png */; };
+		3B7FA515172000A100D71469 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA514172000A100D71469 /* Default-568h@2x.png */; };
+		3B7FA518172000A100D71469 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA517172000A100D71469 /* ViewController.m */; };
+		3B7FA51B172000A100D71469 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA519172000A100D71469 /* ViewController_iPhone.xib */; };
+		3B7FA51E172000A100D71469 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA51C172000A100D71469 /* ViewController_iPad.xib */; };
+		3B7FA529172000BA00D71469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA500172000A100D71469 /* Foundation.framework */; };
+		3B7FA53C172003F900D71469 /* OAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA536172003F900D71469 /* OAuth2AccessToken.m */; };
+		3B7FA53D172003F900D71469 /* OAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA536172003F900D71469 /* OAuth2AccessToken.m */; };
+		3B7FA53E172003F900D71469 /* OAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA538172003F900D71469 /* OAuth2Client.m */; };
+		3B7FA53F172003F900D71469 /* OAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA538172003F900D71469 /* OAuth2Client.m */; };
+		3B7FA540172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */; };
+		3B7FA541172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */; };
+		3B7FA5491720045900D71469 /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */; };
+		3B7FA54A1720045900D71469 /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */; };
+		3B7FA54B1720045900D71469 /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5461720045900D71469 /* NSString+QueryString.m */; };
+		3B7FA54C1720045900D71469 /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5461720045900D71469 /* NSString+QueryString.m */; };
+		3B7FA54D1720045900D71469 /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */; };
+		3B7FA54E1720045900D71469 /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */; };
+		3B7FA54F17200A6C00D71469 /* libHMOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B7FA526172000BA00D71469 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3B149A13172D06110021B797 /* HMOAuthConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMOAuthConstants.h; sourceTree = "<group>"; };
+		3B28DB3A17393A2E009CBCC1 /* HMOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HMOAuth2ClientConfig.plist; sourceTree = "<group>"; };
+		3B3BD7131728EB9D008D53DB /* HMLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLogManager.h; sourceTree = "<group>"; };
+		3B3BD7141728EB9D008D53DB /* libHMLoggerDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHMLoggerDebug.a; sourceTree = "<group>"; };
+		3B3BD7151728EB9D008D53DB /* libHMLoggerRelease.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHMLoggerRelease.a; sourceTree = "<group>"; };
+		3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LoggerConfig.plist; path = HMOAuth2Client/LoggerLib/LoggerConfig.plist; sourceTree = "<group>"; };
+		3B5362A1172F9A520054D967 /* PlistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistHelper.h; sourceTree = "<group>"; };
+		3B5362A2172F9A520054D967 /* PlistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistHelper.m; sourceTree = "<group>"; };
+		3B7FA4FB172000A100D71469 /* OAuth2ClientApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuth2ClientApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7FA4FE172000A100D71469 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B7FA500172000A100D71469 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B7FA502172000A100D71469 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B7FA506172000A100D71469 /* OAuth2ClientApplication-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OAuth2ClientApplication-Info.plist"; sourceTree = "<group>"; };
+		3B7FA508172000A100D71469 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B7FA50A172000A100D71469 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B7FA50C172000A100D71469 /* OAuth2ClientApplication-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuth2ClientApplication-Prefix.pch"; sourceTree = "<group>"; };
+		3B7FA50D172000A100D71469 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B7FA50E172000A100D71469 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B7FA510172000A100D71469 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3B7FA512172000A100D71469 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3B7FA514172000A100D71469 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B7FA516172000A100D71469 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B7FA517172000A100D71469 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B7FA51A172000A100D71469 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		3B7FA51D172000A100D71469 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHMOAuth2Client.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7FA52C172000BA00D71469 /* HMOAuth2Client-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMOAuth2Client-Prefix.pch"; sourceTree = "<group>"; };
+		3B7FA535172003F900D71469 /* OAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2AccessToken.h; sourceTree = "<group>"; };
+		3B7FA536172003F900D71469 /* OAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2AccessToken.m; sourceTree = "<group>"; };
+		3B7FA537172003F900D71469 /* OAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2Client.h; sourceTree = "<group>"; };
+		3B7FA538172003F900D71469 /* OAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2Client.m; sourceTree = "<group>"; };
+		3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2ClientDelegate.h; sourceTree = "<group>"; };
+		3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2ClientURLRequestOperation.h; sourceTree = "<group>"; };
+		3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2ClientURLRequestOperation.m; sourceTree = "<group>"; };
+		3B7FA5431720045900D71469 /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
+		3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
+		3B7FA5451720045900D71469 /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
+		3B7FA5461720045900D71469 /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
+		3B7FA5471720045900D71469 /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
+		3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B7FA4F8172000A100D71469 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7FA54F17200A6C00D71469 /* libHMOAuth2Client.a in Frameworks */,
+				3B7FA4FF172000A100D71469 /* UIKit.framework in Frameworks */,
+				3B7FA501172000A100D71469 /* Foundation.framework in Frameworks */,
+				3B7FA503172000A100D71469 /* CoreGraphics.framework in Frameworks */,
+				3B3BD7171728EB9D008D53DB /* libHMLoggerDebug.a in Frameworks */,
+				3B3BD7191728EB9D008D53DB /* libHMLoggerRelease.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B7FA525172000BA00D71469 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7FA529172000BA00D71469 /* Foundation.framework in Frameworks */,
+				3B3BD7181728EB9D008D53DB /* libHMLoggerDebug.a in Frameworks */,
+				3B3BD71A1728EB9D008D53DB /* libHMLoggerRelease.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B3BD7111728EB9D008D53DB /* LoggerLib */ = {
+			isa = PBXGroup;
+			children = (
+				3B3BD7121728EB9D008D53DB /* headers */,
+				3B3BD7141728EB9D008D53DB /* libHMLoggerDebug.a */,
+				3B3BD7151728EB9D008D53DB /* libHMLoggerRelease.a */,
+			);
+			name = LoggerLib;
+			path = HMOAuth2Client/LoggerLib;
+			sourceTree = "<group>";
+		};
+		3B3BD7121728EB9D008D53DB /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				3B3BD7131728EB9D008D53DB /* HMLogManager.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		3B5362A0172F9A410054D967 /* HMPlistHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3B5362A1172F9A520054D967 /* PlistHelper.h */,
+				3B5362A2172F9A520054D967 /* PlistHelper.m */,
+			);
+			name = HMPlistHelper;
+			path = Classes/Utils/HMPlistHelper;
+			sourceTree = "<group>";
+		};
+		3B7FA4F2172000A100D71469 = {
+			isa = PBXGroup;
+			children = (
+				3B28DB3A17393A2E009CBCC1 /* HMOAuth2ClientConfig.plist */,
+				3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */,
+				3B3BD7111728EB9D008D53DB /* LoggerLib */,
+				3B7FA504172000A100D71469 /* HMOAuth2ClientApplication */,
+				3B7FA52A172000BA00D71469 /* HMOAuth2Client */,
+				3B7FA4FD172000A100D71469 /* Frameworks */,
+				3B7FA4FC172000A100D71469 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B7FA4FC172000A100D71469 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA4FB172000A100D71469 /* OAuth2ClientApplication.app */,
+				3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B7FA4FD172000A100D71469 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA4FE172000A100D71469 /* UIKit.framework */,
+				3B7FA500172000A100D71469 /* Foundation.framework */,
+				3B7FA502172000A100D71469 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B7FA504172000A100D71469 /* HMOAuth2ClientApplication */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA50D172000A100D71469 /* AppDelegate.h */,
+				3B7FA50E172000A100D71469 /* AppDelegate.m */,
+				3B7FA516172000A100D71469 /* ViewController.h */,
+				3B7FA517172000A100D71469 /* ViewController.m */,
+				3B7FA519172000A100D71469 /* ViewController_iPhone.xib */,
+				3B7FA51C172000A100D71469 /* ViewController_iPad.xib */,
+				3B7FA505172000A100D71469 /* Supporting Files */,
+			);
+			path = HMOAuth2ClientApplication;
+			sourceTree = "<group>";
+		};
+		3B7FA505172000A100D71469 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA506172000A100D71469 /* OAuth2ClientApplication-Info.plist */,
+				3B7FA507172000A100D71469 /* InfoPlist.strings */,
+				3B7FA50A172000A100D71469 /* main.m */,
+				3B7FA50C172000A100D71469 /* OAuth2ClientApplication-Prefix.pch */,
+				3B7FA510172000A100D71469 /* Default.png */,
+				3B7FA512172000A100D71469 /* Default@2x.png */,
+				3B7FA514172000A100D71469 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B7FA52A172000BA00D71469 /* HMOAuth2Client */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA534172003F900D71469 /* Classes */,
+				3B5362A0172F9A410054D967 /* HMPlistHelper */,
+				3B7FA5421720043500D71469 /* Catagories */,
+				3B7FA52B172000BA00D71469 /* Supporting Files */,
+				3B149A13172D06110021B797 /* HMOAuthConstants.h */,
+			);
+			path = HMOAuth2Client;
+			sourceTree = "<group>";
+		};
+		3B7FA52B172000BA00D71469 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA52C172000BA00D71469 /* HMOAuth2Client-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B7FA534172003F900D71469 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA535172003F900D71469 /* OAuth2AccessToken.h */,
+				3B7FA536172003F900D71469 /* OAuth2AccessToken.m */,
+				3B7FA537172003F900D71469 /* OAuth2Client.h */,
+				3B7FA538172003F900D71469 /* OAuth2Client.m */,
+				3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */,
+				3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */,
+				3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3B7FA5421720043500D71469 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA5431720045900D71469 /* NSDictionary+QueryString.h */,
+				3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */,
+				3B7FA5451720045900D71469 /* NSString+QueryString.h */,
+				3B7FA5461720045900D71469 /* NSString+QueryString.m */,
+				3B7FA5471720045900D71469 /* NSURL+QueryInspector.h */,
+				3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */,
+			);
+			name = Catagories;
+			path = Classes/Catagories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3B502A85172143920036CEED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B149A14172D06110021B797 /* HMOAuthConstants.h in Headers */,
+				3B502A86172143A30036CEED /* OAuth2Client.h in Headers */,
+				3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */,
+				3B3BD7161728EB9D008D53DB /* HMLogManager.h in Headers */,
+				3B5362A3172F9A520054D967 /* PlistHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3B7FA4FA172000A100D71469 /* OAuth2ClientApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B7FA521172000A100D71469 /* Build configuration list for PBXNativeTarget "OAuth2ClientApplication" */;
+			buildPhases = (
+				3B7FA4F7172000A100D71469 /* Sources */,
+				3B7FA4F8172000A100D71469 /* Frameworks */,
+				3B7FA4F9172000A100D71469 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OAuth2ClientApplication;
+			productName = HMOAuth2ClientApplication;
+			productReference = 3B7FA4FB172000A100D71469 /* OAuth2ClientApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B7FA527172000BA00D71469 /* HMOAuth2Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B7FA531172000BA00D71469 /* Build configuration list for PBXNativeTarget "HMOAuth2Client" */;
+			buildPhases = (
+				3B7FA524172000BA00D71469 /* Sources */,
+				3B7FA525172000BA00D71469 /* Frameworks */,
+				3B7FA526172000BA00D71469 /* CopyFiles */,
+				3B502A85172143920036CEED /* Headers */,
+				3B3D6A3E17251408008777FE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMOAuth2Client;
+			productName = HMOAuth2Client;
+			productReference = 3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B7FA4F3172000A100D71469 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = happiestminds;
+			};
+			buildConfigurationList = 3B7FA4F6172000A100D71469 /* Build configuration list for PBXProject "OAuth2ClientApplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B7FA4F2172000A100D71469;
+			productRefGroup = 3B7FA4FC172000A100D71469 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B7FA4FA172000A100D71469 /* OAuth2ClientApplication */,
+				3B7FA527172000BA00D71469 /* HMOAuth2Client */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B7FA4F9172000A100D71469 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7FA509172000A100D71469 /* InfoPlist.strings in Resources */,
+				3B7FA511172000A100D71469 /* Default.png in Resources */,
+				3B7FA513172000A100D71469 /* Default@2x.png in Resources */,
+				3B7FA515172000A100D71469 /* Default-568h@2x.png in Resources */,
+				3B7FA51B172000A100D71469 /* ViewController_iPhone.xib in Resources */,
+				3B7FA51E172000A100D71469 /* ViewController_iPad.xib in Resources */,
+				3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */,
+				3B28DB3B17393A2E009CBCC1 /* HMOAuth2ClientConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B3D6A3E17251408008777FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${TARGET_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${TARGET_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/lib${TARGET_NAME}${CONFIGURATION}.a\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${TARGET_NAME}.framework\" &&\n\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${BUILD_DIR}/universal\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\"&&\ncp -r \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/headers\" \"${BUILD_DIR}/universal\"\ncp -r \"${BUILD_DIR}/Debug-iphoneuniversal/lib${PRODUCT_NAME}Debug.a\" \"${BUILD_DIR}/universal\"\ncp -r \"${BUILD_DIR}/Release-iphoneuniversal/lib${PRODUCT_NAME}Release.a\" \"${BUILD_DIR}/universal\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B7FA4F7172000A100D71469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7FA50B172000A100D71469 /* main.m in Sources */,
+				3B7FA50F172000A100D71469 /* AppDelegate.m in Sources */,
+				3B7FA518172000A100D71469 /* ViewController.m in Sources */,
+				3B7FA53C172003F900D71469 /* OAuth2AccessToken.m in Sources */,
+				3B7FA53E172003F900D71469 /* OAuth2Client.m in Sources */,
+				3B7FA540172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */,
+				3B7FA5491720045900D71469 /* NSDictionary+QueryString.m in Sources */,
+				3B7FA54B1720045900D71469 /* NSString+QueryString.m in Sources */,
+				3B7FA54D1720045900D71469 /* NSURL+QueryInspector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B7FA524172000BA00D71469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7FA53D172003F900D71469 /* OAuth2AccessToken.m in Sources */,
+				3B7FA53F172003F900D71469 /* OAuth2Client.m in Sources */,
+				3B7FA541172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */,
+				3B7FA54A1720045900D71469 /* NSDictionary+QueryString.m in Sources */,
+				3B7FA54C1720045900D71469 /* NSString+QueryString.m in Sources */,
+				3B7FA54E1720045900D71469 /* NSURL+QueryInspector.m in Sources */,
+				3B5362A4172F9A520054D967 /* PlistHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B7FA507172000A100D71469 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7FA508172000A100D71469 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B7FA519172000A100D71469 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7FA51A172000A100D71469 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3B7FA51C172000A100D71469 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7FA51D172000A100D71469 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B7FA51F172000A100D71469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B7FA520172000A100D71469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B7FA522172000A100D71469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMOAuth2ClientApplication/OAuth2ClientApplication-Prefix.pch";
+				INFOPLIST_FILE = "HMOAuth2ClientApplication/OAuth2ClientApplication-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HMOAuth2Client/LoggerLib\"",
+				);
+				PRODUCT_NAME = OAuth2ClientApplication;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B7FA523172000A100D71469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMOAuth2ClientApplication/OAuth2ClientApplication-Prefix.pch";
+				INFOPLIST_FILE = "HMOAuth2ClientApplication/OAuth2ClientApplication-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HMOAuth2Client/LoggerLib\"",
+				);
+				PRODUCT_NAME = OAuth2ClientApplication;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B7FA532172000BA00D71469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/HMOAuth2Client.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMOAuth2Client/HMOAuth2Client-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HMOAuth2Client/LoggerLib\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3B7FA533172000BA00D71469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/HMOAuth2Client.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMOAuth2Client/HMOAuth2Client-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HMOAuth2Client/LoggerLib\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B7FA4F6172000A100D71469 /* Build configuration list for PBXProject "OAuth2ClientApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7FA51F172000A100D71469 /* Debug */,
+				3B7FA520172000A100D71469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B7FA521172000A100D71469 /* Build configuration list for PBXNativeTarget "OAuth2ClientApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7FA522172000A100D71469 /* Debug */,
+				3B7FA523172000A100D71469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B7FA531172000BA00D71469 /* Build configuration list for PBXNativeTarget "HMOAuth2Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7FA532172000BA00D71469 /* Debug */,
+				3B7FA533172000BA00D71469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B7FA4F3172000A100D71469 /* Project object */;
+}

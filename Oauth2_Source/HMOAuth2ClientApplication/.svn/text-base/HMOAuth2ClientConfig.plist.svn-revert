@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ServiceProvider</key>
+	<string>LinkedIn</string>
+	<key>ClientID</key>
+	<string>4zvpanw75ree</string>
+	<key>ClientSecret</key>
+	<string>HiM77InKOYJlAKds</string>
+	<key>RedirectURL</key>
+	<string>http://www.happiestminds.com/</string>
+	<key>UserURL</key>
+	<string>https://www.linkedin.com/uas/oauth2/authorization</string>
+	<key>TokenURL</key>
+	<string>https://www.linkedin.com/uas/oauth2/accessToken</string>
+	<key>AccessCodeRequestParams</key>
+	<dict>
+		<key>response_type</key>
+		<string>code</string>
+		<key>state</key>
+		<string>DCEEFWF45453sdffef424</string>
+		<key>type</key>
+		<string>web_server</string>
+	</dict>
+	<key>ExchangeAccessTokenParams</key>
+	<dict>
+		<key>grant_type</key>
+		<string>authorization_code</string>
+		<key>type</key>
+		<string>code</string>
+	</dict>
+	<key>RefreshTokenParams</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>New item - 2</key>
+		<string></string>
+		<key>New item - 4</key>
+		<string></string>
+		<key>New item - 3</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

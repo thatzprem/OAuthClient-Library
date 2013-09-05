@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ServiceProvider</key>
+	<string>Google</string>
+	<key>ClientID</key>
+	<string>294328016521-s6bafdrte57pr70320bmk3hh76af9pva.apps.googleusercontent.com</string>
+	<key>ClientSecret</key>
+	<string>YDId707fyEc-7ijFACHi0AKn</string>
+	<key>RedirectURL</key>
+	<string>https://nextip.com/oauth2callback</string>
+	<key>UserURL</key>
+	<string>https://accounts.google.com/o/oauth2/auth</string>
+	<key>TokenURL</key>
+	<string>https://accounts.google.com/o/oauth2/token</string>
+	<key>AccessTokenAdditionalParams</key>
+	<dict>
+		<key>response_type</key>
+		<string>code</string>
+		<key>scope</key>
+		<string>https://picasaweb.google.com/data/</string>
+		<key>access_type</key>
+		<string>online</string>
+	</dict>
+	<key>ExchangeAccessTokenParams</key>
+	<dict>
+		<key>grant_type</key>
+		<string>authorization_code</string>
+		<key>type</key>
+		<string>code</string>
+	</dict>
+	<key>RefreshTokenAdditionalParams</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>New item - 2</key>
+		<string></string>
+		<key>New item - 4</key>
+		<string></string>
+		<key>New item - 3</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

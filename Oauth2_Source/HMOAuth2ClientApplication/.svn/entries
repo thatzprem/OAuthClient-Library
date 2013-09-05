@@ -1,0 +1,116 @@
+10
+
+dir
+991
+https://svn.happiestminds.com/svn/its_mobility-applications/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication
+https://svn.happiestminds.com/svn/its_mobility-applications
+
+
+
+2013-05-08T08:39:47.193117Z
+980
+prem.kumar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e6ea145e-ad38-49eb-bb79-50c958918f51
+
+OAuth2ClientApplication.xcodeproj
+dir
+
+PicasaOAuth2ClientConfig.plist
+file
+0
+
+
+add
+
+SkyDriveOAuth2ClientConfig.plist
+file
+0
+
+
+add
+
+HMOAuth2Client
+dir
+
+HMOAuth2ClientApplication.xcodeproj
+dir
+
+HMOAuth2ClientConfig.plist
+file
+
+
+
+delete
+2013-05-14T13:39:49.000000Z
+
+2013-05-08T08:39:47.193117Z
+980
+prem.kumar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1201
+
+InstagramOAuth2ClientConfig.plist
+file
+0
+
+
+add
+
+GoogleDriveOAuth2ClientConfig.plist
+file
+0
+
+
+add
+
+HMOAuth2ClientApplication
+dir
+
+FacebookOAuth2ClientConfig.plist
+file
+0
+
+
+add
+
+GoogleOAuth2ClientConfig.plist
+file
+0
+
+
+add
+

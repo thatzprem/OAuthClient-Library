@@ -1,0 +1,1022 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E0333FB174A8276004380BF /* libOAuth1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F51BE17473F8800427CBC /* libOAuth1.0.a */; };
+		2E0AD186174D1351001B7BF2 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AD181174D1351001B7BF2 /* NSMutableURLRequest+Parameters.m */; };
+		2E0AD187174D1351001B7BF2 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AD183174D1351001B7BF2 /* NSString+URLEncoding.m */; };
+		2E0AD188174D1351001B7BF2 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AD185174D1351001B7BF2 /* NSURL+Base.m */; };
+		2E17D89D174E6FD70067BB3B /* OAuthConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D882174E6FD70067BB3B /* OAuthConnectionManager.m */; };
+		2E17D89E174E6FD70067BB3B /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D885174E6FD70067BB3B /* Base64Transcoder.c */; };
+		2E17D89F174E6FD70067BB3B /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D887174E6FD70067BB3B /* hmac.c */; };
+		2E17D8A0174E6FD70067BB3B /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D889174E6FD70067BB3B /* sha1.c */; };
+		2E17D8A1174E6FD70067BB3B /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D88D174E6FD70067BB3B /* OARequestParameter.m */; };
+		2E17D8A2174E6FD70067BB3B /* OAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D88F174E6FD70067BB3B /* OAuthManager.m */; };
+		2E17D8A3174E6FD70067BB3B /* OAuthRequiredParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D891174E6FD70067BB3B /* OAuthRequiredParameter.m */; };
+		2E17D8A4174E6FD70067BB3B /* OAuthSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D893174E6FD70067BB3B /* OAuthSignature.m */; };
+		2E17D8A5174E6FD70067BB3B /* WebAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D895174E6FD70067BB3B /* WebAuthorization.m */; };
+		2E17D8A6174E6FD70067BB3B /* OAuthAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D898174E6FD70067BB3B /* OAuthAccessToken.m */; };
+		2E17D8A7174E6FD70067BB3B /* OAuthConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D89A174E6FD70067BB3B /* OAuthConsumer.m */; };
+		2E17D8AA174E752A0067BB3B /* FlickrConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D8A9174E752A0067BB3B /* FlickrConnector.m */; };
+		2E17D8B0174E793F0067BB3B /* OAuthHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D8AF174E793F0067BB3B /* OAuthHeader.m */; };
+		2E17D8B2174E7EAC0067BB3B /* OAuthManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E17D88E174E6FD70067BB3B /* OAuthManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E17D8B3174E7EAF0067BB3B /* FlickrConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E17D8A8174E752A0067BB3B /* FlickrConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E17D8B6174E89070067BB3B /* TwitterConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E17D8B4174E89070067BB3B /* TwitterConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E17D8B7174E89070067BB3B /* TwitterConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17D8B5174E89070067BB3B /* TwitterConnector.m */; };
+		2E3F518017473F0200427CBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F517F17473F0200427CBC /* UIKit.framework */; };
+		2E3F518217473F0200427CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F518117473F0200427CBC /* Foundation.framework */; };
+		2E3F518417473F0200427CBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F518317473F0200427CBC /* CoreGraphics.framework */; };
+		2E3F518A17473F0200427CBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F518817473F0200427CBC /* InfoPlist.strings */; };
+		2E3F518C17473F0200427CBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F518B17473F0200427CBC /* main.m */; };
+		2E3F519017473F0200427CBC /* SocialConnectAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F518F17473F0200427CBC /* SocialConnectAppDelegate.m */; };
+		2E3F519217473F0200427CBC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F519117473F0200427CBC /* Default.png */; };
+		2E3F519417473F0200427CBC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F519317473F0200427CBC /* Default@2x.png */; };
+		2E3F519617473F0200427CBC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F519517473F0200427CBC /* Default-568h@2x.png */; };
+		2E3F519917473F0200427CBC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F519717473F0200427CBC /* MainStoryboard.storyboard */; };
+		2E3F519C17473F0200427CBC /* SocialConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F519B17473F0200427CBC /* SocialConnectViewController.m */; };
+		2E3F51A417473F0200427CBC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F51A317473F0200427CBC /* SenTestingKit.framework */; };
+		2E3F51A517473F0200427CBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F517F17473F0200427CBC /* UIKit.framework */; };
+		2E3F51A617473F0200427CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F518117473F0200427CBC /* Foundation.framework */; };
+		2E3F51AE17473F0200427CBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F51AC17473F0200427CBC /* InfoPlist.strings */; };
+		2E3F51B117473F0200427CBC /* SociallyConnectingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F51B017473F0200427CBC /* SociallyConnectingTests.m */; };
+		2E3F51BF17473F8800427CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F518117473F0200427CBC /* Foundation.framework */; };
+		2E3F51CD17473F8800427CBC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F51A317473F0200427CBC /* SenTestingKit.framework */; };
+		2E3F51CE17473F8800427CBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F517F17473F0200427CBC /* UIKit.framework */; };
+		2E3F51CF17473F8800427CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F518117473F0200427CBC /* Foundation.framework */; };
+		2E3F51D217473F8800427CBC /* libOAuth1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F51BE17473F8800427CBC /* libOAuth1.0.a */; };
+		2E3F51D817473F8800427CBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F51D617473F8800427CBC /* InfoPlist.strings */; };
+		2E3F51DB17473F8800427CBC /* OAuth1_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F51DA17473F8800427CBC /* OAuth1_0Tests.m */; };
+		2E3F51E51747406A00427CBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3F517F17473F0200427CBC /* UIKit.framework */; };
+		2E4EF95917509D3000DB118C /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EF95817509D3000DB118C /* TwitterViewController.m */; };
+		2E4EF95C17509D4300DB118C /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EF95B17509D4300DB118C /* FlickrViewController.m */; };
+		2E4EF95F17509D5800DB118C /* YahooViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EF95E17509D5800DB118C /* YahooViewController.m */; };
+		2E4EF96317509D8B00DB118C /* NTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EF96117509D8B00DB118C /* NTView.m */; };
+		2E4EF96417509D8B00DB118C /* NTView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EF96217509D8B00DB118C /* NTView.xib */; };
+		3BD20AE817D85D0200C9C510 /* TumblrConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD20AE617D85D0200C9C510 /* TumblrConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BD20AE917D85D0200C9C510 /* TumblrConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD20AE717D85D0200C9C510 /* TumblrConnector.m */; };
+		3BD20AEC17D85DA900C9C510 /* TumblrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD20AEB17D85DA900C9C510 /* TumblrViewController.m */; };
+		3BE5163A1751316B00B7B190 /* YahooConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE516381751316B00B7B190 /* YahooConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE5163B1751316B00B7B190 /* YahooConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE516391751316B00B7B190 /* YahooConnector.m */; };
+		3BF047811758FE6C0077F628 /* DropBoxConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF0477F1758FE6C0077F628 /* DropBoxConnector.h */; };
+		3BF047821758FE6C0077F628 /* DropBoxConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF047801758FE6C0077F628 /* DropBoxConnector.m */; };
+		3BF04786175900CB0077F628 /* DropBoxControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF04785175900CB0077F628 /* DropBoxControllerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E3F51A717473F0200427CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E3F517217473F0100427CBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E3F517A17473F0100427CBC;
+			remoteInfo = SociallyConnecting;
+		};
+		2E3F51D017473F8800427CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E3F517217473F0100427CBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E3F51BD17473F8800427CBC;
+			remoteInfo = OAuth1.0;
+		};
+		2E3F51E91747446000427CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E3F517217473F0100427CBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E3F51BD17473F8800427CBC;
+			remoteInfo = OAuth1.0;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E3F51BC17473F8800427CBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2E0333FC174A86FD004380BF /* Constanst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constanst.h; sourceTree = "<group>"; };
+		2E0AD180174D1351001B7BF2 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		2E0AD181174D1351001B7BF2 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
+		2E0AD182174D1351001B7BF2 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		2E0AD183174D1351001B7BF2 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		2E0AD184174D1351001B7BF2 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
+		2E0AD185174D1351001B7BF2 /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
+		2E17D881174E6FD70067BB3B /* OAuthConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConnectionManager.h; sourceTree = "<group>"; };
+		2E17D882174E6FD70067BB3B /* OAuthConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConnectionManager.m; sourceTree = "<group>"; };
+		2E17D885174E6FD70067BB3B /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		2E17D886174E6FD70067BB3B /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		2E17D887174E6FD70067BB3B /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		2E17D888174E6FD70067BB3B /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		2E17D889174E6FD70067BB3B /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		2E17D88A174E6FD70067BB3B /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		2E17D88C174E6FD70067BB3B /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
+		2E17D88D174E6FD70067BB3B /* OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestParameter.m; sourceTree = "<group>"; };
+		2E17D88E174E6FD70067BB3B /* OAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthManager.h; sourceTree = "<group>"; };
+		2E17D88F174E6FD70067BB3B /* OAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthManager.m; sourceTree = "<group>"; };
+		2E17D890174E6FD70067BB3B /* OAuthRequiredParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthRequiredParameter.h; sourceTree = "<group>"; };
+		2E17D891174E6FD70067BB3B /* OAuthRequiredParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthRequiredParameter.m; sourceTree = "<group>"; };
+		2E17D892174E6FD70067BB3B /* OAuthSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSignature.h; sourceTree = "<group>"; };
+		2E17D893174E6FD70067BB3B /* OAuthSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthSignature.m; sourceTree = "<group>"; };
+		2E17D894174E6FD70067BB3B /* WebAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAuthorization.h; sourceTree = "<group>"; };
+		2E17D895174E6FD70067BB3B /* WebAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAuthorization.m; sourceTree = "<group>"; };
+		2E17D897174E6FD70067BB3B /* OAuthAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthAccessToken.h; sourceTree = "<group>"; };
+		2E17D898174E6FD70067BB3B /* OAuthAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthAccessToken.m; sourceTree = "<group>"; };
+		2E17D899174E6FD70067BB3B /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
+		2E17D89A174E6FD70067BB3B /* OAuthConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConsumer.m; sourceTree = "<group>"; };
+		2E17D8A8174E752A0067BB3B /* FlickrConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrConnector.h; sourceTree = "<group>"; };
+		2E17D8A9174E752A0067BB3B /* FlickrConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrConnector.m; sourceTree = "<group>"; };
+		2E17D8AE174E793F0067BB3B /* OAuthHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthHeader.h; sourceTree = "<group>"; };
+		2E17D8AF174E793F0067BB3B /* OAuthHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthHeader.m; sourceTree = "<group>"; };
+		2E17D8B4174E89070067BB3B /* TwitterConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterConnector.h; sourceTree = "<group>"; };
+		2E17D8B5174E89070067BB3B /* TwitterConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterConnector.m; sourceTree = "<group>"; };
+		2E3F517B17473F0200427CBC /* SociallyConnecting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SociallyConnecting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3F517F17473F0200427CBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2E3F518117473F0200427CBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2E3F518317473F0200427CBC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2E3F518717473F0200427CBC /* SociallyConnecting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SociallyConnecting-Info.plist"; sourceTree = "<group>"; };
+		2E3F518917473F0200427CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E3F518B17473F0200427CBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E3F518D17473F0200427CBC /* SociallyConnecting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SociallyConnecting-Prefix.pch"; sourceTree = "<group>"; };
+		2E3F518E17473F0200427CBC /* SocialConnectAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialConnectAppDelegate.h; sourceTree = "<group>"; };
+		2E3F518F17473F0200427CBC /* SocialConnectAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialConnectAppDelegate.m; sourceTree = "<group>"; };
+		2E3F519117473F0200427CBC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2E3F519317473F0200427CBC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2E3F519517473F0200427CBC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2E3F519817473F0200427CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2E3F519A17473F0200427CBC /* SocialConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialConnectViewController.h; sourceTree = "<group>"; };
+		2E3F519B17473F0200427CBC /* SocialConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialConnectViewController.m; sourceTree = "<group>"; };
+		2E3F51A217473F0200427CBC /* SociallyConnectingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SociallyConnectingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3F51A317473F0200427CBC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2E3F51AB17473F0200427CBC /* SociallyConnectingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SociallyConnectingTests-Info.plist"; sourceTree = "<group>"; };
+		2E3F51AD17473F0200427CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E3F51AF17473F0200427CBC /* SociallyConnectingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SociallyConnectingTests.h; sourceTree = "<group>"; };
+		2E3F51B017473F0200427CBC /* SociallyConnectingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SociallyConnectingTests.m; sourceTree = "<group>"; };
+		2E3F51BE17473F8800427CBC /* libOAuth1.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOAuth1.0.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3F51C217473F8800427CBC /* OAuth1.0-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuth1.0-Prefix.pch"; sourceTree = "<group>"; };
+		2E3F51CC17473F8800427CBC /* OAuth1.0Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAuth1.0Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E3F51D517473F8800427CBC /* OAuth1.0Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OAuth1.0Tests-Info.plist"; sourceTree = "<group>"; };
+		2E3F51D717473F8800427CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E3F51D917473F8800427CBC /* OAuth1_0Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuth1_0Tests.h; sourceTree = "<group>"; };
+		2E3F51DA17473F8800427CBC /* OAuth1_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAuth1_0Tests.m; sourceTree = "<group>"; };
+		2E4EF95717509D3000DB118C /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		2E4EF95817509D3000DB118C /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		2E4EF95A17509D4300DB118C /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
+		2E4EF95B17509D4300DB118C /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
+		2E4EF95D17509D5800DB118C /* YahooViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YahooViewController.h; sourceTree = "<group>"; };
+		2E4EF95E17509D5800DB118C /* YahooViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YahooViewController.m; sourceTree = "<group>"; };
+		2E4EF96017509D8B00DB118C /* NTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTView.h; sourceTree = "<group>"; };
+		2E4EF96117509D8B00DB118C /* NTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTView.m; sourceTree = "<group>"; };
+		2E4EF96217509D8B00DB118C /* NTView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTView.xib; sourceTree = "<group>"; };
+		3BD20AE617D85D0200C9C510 /* TumblrConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TumblrConnector.h; path = "Tumblr Connector/TumblrConnector.h"; sourceTree = "<group>"; };
+		3BD20AE717D85D0200C9C510 /* TumblrConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TumblrConnector.m; path = "Tumblr Connector/TumblrConnector.m"; sourceTree = "<group>"; };
+		3BD20AEA17D85DA900C9C510 /* TumblrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrViewController.h; sourceTree = "<group>"; };
+		3BD20AEB17D85DA900C9C510 /* TumblrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrViewController.m; sourceTree = "<group>"; };
+		3BE516381751316B00B7B190 /* YahooConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YahooConnector.h; sourceTree = "<group>"; };
+		3BE516391751316B00B7B190 /* YahooConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YahooConnector.m; sourceTree = "<group>"; };
+		3BF0477F1758FE6C0077F628 /* DropBoxConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxConnector.h; sourceTree = "<group>"; };
+		3BF047801758FE6C0077F628 /* DropBoxConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxConnector.m; sourceTree = "<group>"; };
+		3BF04784175900CB0077F628 /* DropBoxControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxControllerViewController.h; sourceTree = "<group>"; };
+		3BF04785175900CB0077F628 /* DropBoxControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxControllerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E3F517817473F0100427CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0333FB174A8276004380BF /* libOAuth1.0.a in Frameworks */,
+				2E3F518017473F0200427CBC /* UIKit.framework in Frameworks */,
+				2E3F518217473F0200427CBC /* Foundation.framework in Frameworks */,
+				2E3F518417473F0200427CBC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F519E17473F0200427CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51A417473F0200427CBC /* SenTestingKit.framework in Frameworks */,
+				2E3F51A517473F0200427CBC /* UIKit.framework in Frameworks */,
+				2E3F51A617473F0200427CBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F51BB17473F8800427CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51E51747406A00427CBC /* UIKit.framework in Frameworks */,
+				2E3F51BF17473F8800427CBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F51C817473F8800427CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51CD17473F8800427CBC /* SenTestingKit.framework in Frameworks */,
+				2E3F51CE17473F8800427CBC /* UIKit.framework in Frameworks */,
+				2E3F51CF17473F8800427CBC /* Foundation.framework in Frameworks */,
+				2E3F51D217473F8800427CBC /* libOAuth1.0.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E0AD17F174D1351001B7BF2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2E0AD180174D1351001B7BF2 /* NSMutableURLRequest+Parameters.h */,
+				2E0AD181174D1351001B7BF2 /* NSMutableURLRequest+Parameters.m */,
+				2E0AD182174D1351001B7BF2 /* NSString+URLEncoding.h */,
+				2E0AD183174D1351001B7BF2 /* NSString+URLEncoding.m */,
+				2E0AD184174D1351001B7BF2 /* NSURL+Base.h */,
+				2E0AD185174D1351001B7BF2 /* NSURL+Base.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2E17D880174E6FD70067BB3B /* Connection Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2E17D881174E6FD70067BB3B /* OAuthConnectionManager.h */,
+				2E17D882174E6FD70067BB3B /* OAuthConnectionManager.m */,
+			);
+			path = "Connection Manager";
+			sourceTree = "<group>";
+		};
+		2E17D883174E6FD70067BB3B /* Flickr Connector */ = {
+			isa = PBXGroup;
+			children = (
+				2E17D8A8174E752A0067BB3B /* FlickrConnector.h */,
+				2E17D8A9174E752A0067BB3B /* FlickrConnector.m */,
+			);
+			path = "Flickr Connector";
+			sourceTree = "<group>";
+		};
+		2E17D884174E6FD70067BB3B /* Hash Crytpo */ = {
+			isa = PBXGroup;
+			children = (
+				2E17D885174E6FD70067BB3B /* Base64Transcoder.c */,
+				2E17D886174E6FD70067BB3B /* Base64Transcoder.h */,
+				2E17D887174E6FD70067BB3B /* hmac.c */,
+				2E17D888174E6FD70067BB3B /* hmac.h */,
+				2E17D889174E6FD70067BB3B /* sha1.c */,
+				2E17D88A174E6FD70067BB3B /* sha1.h */,
+			);
+			path = "Hash Crytpo";
+			sourceTree = "<group>";
+		};
+		2E17D88B174E6FD70067BB3B /* OAuth 1 */ = {
+			isa = PBXGroup;
+			children = (
+				2E17D88C174E6FD70067BB3B /* OARequestParameter.h */,
+				2E17D88D174E6FD70067BB3B /* OARequestParameter.m */,
+				2E17D88E174E6FD70067BB3B /* OAuthManager.h */,
+				2E17D88F174E6FD70067BB3B /* OAuthManager.m */,
+				2E17D890174E6FD70067BB3B /* OAuthRequiredParameter.h */,
+				2E17D891174E6FD70067BB3B /* OAuthRequiredParameter.m */,
+				2E17D892174E6FD70067BB3B /* OAuthSignature.h */,
+				2E17D893174E6FD70067BB3B /* OAuthSignature.m */,
+				2E17D894174E6FD70067BB3B /* WebAuthorization.h */,
+				2E17D895174E6FD70067BB3B /* WebAuthorization.m */,
+				2E17D8AE174E793F0067BB3B /* OAuthHeader.h */,
+				2E17D8AF174E793F0067BB3B /* OAuthHeader.m */,
+			);
+			path = "OAuth 1";
+			sourceTree = "<group>";
+		};
+		2E17D896174E6FD70067BB3B /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				2E17D897174E6FD70067BB3B /* OAuthAccessToken.h */,
+				2E17D898174E6FD70067BB3B /* OAuthAccessToken.m */,
+				2E17D899174E6FD70067BB3B /* OAuthConsumer.h */,
+				2E17D89A174E6FD70067BB3B /* OAuthConsumer.m */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		2E17D89B174E6FD70067BB3B /* Twitter Connector */ = {
+			isa = PBXGroup;
+			children = (
+				2E17D8B4174E89070067BB3B /* TwitterConnector.h */,
+				2E17D8B5174E89070067BB3B /* TwitterConnector.m */,
+			);
+			path = "Twitter Connector";
+			sourceTree = "<group>";
+		};
+		2E17D89C174E6FD70067BB3B /* Yahoo Connector */ = {
+			isa = PBXGroup;
+			children = (
+				3BE516381751316B00B7B190 /* YahooConnector.h */,
+				3BE516391751316B00B7B190 /* YahooConnector.m */,
+			);
+			path = "Yahoo Connector";
+			sourceTree = "<group>";
+		};
+		2E3F517017473F0100427CBC = {
+			isa = PBXGroup;
+			children = (
+				2E3F518517473F0200427CBC /* SociallyConnecting */,
+				2E3F51A917473F0200427CBC /* SociallyConnectingTests */,
+				2E3F51C017473F8800427CBC /* OAuth1.0 */,
+				2E3F51D317473F8800427CBC /* OAuth1.0Tests */,
+				2E3F517E17473F0200427CBC /* Frameworks */,
+				2E3F517C17473F0200427CBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E3F517C17473F0200427CBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F517B17473F0200427CBC /* SociallyConnecting.app */,
+				2E3F51A217473F0200427CBC /* SociallyConnectingTests.octest */,
+				2E3F51BE17473F8800427CBC /* libOAuth1.0.a */,
+				2E3F51CC17473F8800427CBC /* OAuth1.0Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E3F517E17473F0200427CBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F517F17473F0200427CBC /* UIKit.framework */,
+				2E3F518117473F0200427CBC /* Foundation.framework */,
+				2E3F518317473F0200427CBC /* CoreGraphics.framework */,
+				2E3F51A317473F0200427CBC /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E3F518517473F0200427CBC /* SociallyConnecting */ = {
+			isa = PBXGroup;
+			children = (
+				2E4EF96017509D8B00DB118C /* NTView.h */,
+				2E4EF96117509D8B00DB118C /* NTView.m */,
+				2E4EF96217509D8B00DB118C /* NTView.xib */,
+				2E3F518E17473F0200427CBC /* SocialConnectAppDelegate.h */,
+				2E3F518F17473F0200427CBC /* SocialConnectAppDelegate.m */,
+				2E3F519717473F0200427CBC /* MainStoryboard.storyboard */,
+				2E3F519A17473F0200427CBC /* SocialConnectViewController.h */,
+				2E3F519B17473F0200427CBC /* SocialConnectViewController.m */,
+				2E4EF95717509D3000DB118C /* TwitterViewController.h */,
+				2E4EF95817509D3000DB118C /* TwitterViewController.m */,
+				2E4EF95A17509D4300DB118C /* FlickrViewController.h */,
+				2E4EF95B17509D4300DB118C /* FlickrViewController.m */,
+				2E4EF95D17509D5800DB118C /* YahooViewController.h */,
+				2E4EF95E17509D5800DB118C /* YahooViewController.m */,
+				3BF04784175900CB0077F628 /* DropBoxControllerViewController.h */,
+				3BF04785175900CB0077F628 /* DropBoxControllerViewController.m */,
+				3BD20AEA17D85DA900C9C510 /* TumblrViewController.h */,
+				3BD20AEB17D85DA900C9C510 /* TumblrViewController.m */,
+				2E3F518617473F0200427CBC /* Supporting Files */,
+			);
+			path = SociallyConnecting;
+			sourceTree = "<group>";
+		};
+		2E3F518617473F0200427CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F518717473F0200427CBC /* SociallyConnecting-Info.plist */,
+				2E3F518817473F0200427CBC /* InfoPlist.strings */,
+				2E3F518B17473F0200427CBC /* main.m */,
+				2E3F518D17473F0200427CBC /* SociallyConnecting-Prefix.pch */,
+				2E3F519117473F0200427CBC /* Default.png */,
+				2E3F519317473F0200427CBC /* Default@2x.png */,
+				2E3F519517473F0200427CBC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E3F51A917473F0200427CBC /* SociallyConnectingTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F51AF17473F0200427CBC /* SociallyConnectingTests.h */,
+				2E3F51B017473F0200427CBC /* SociallyConnectingTests.m */,
+				2E3F51AA17473F0200427CBC /* Supporting Files */,
+			);
+			path = SociallyConnectingTests;
+			sourceTree = "<group>";
+		};
+		2E3F51AA17473F0200427CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F51AB17473F0200427CBC /* SociallyConnectingTests-Info.plist */,
+				2E3F51AC17473F0200427CBC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E3F51C017473F8800427CBC /* OAuth1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				3BD20AE517D85CD200C9C510 /* Tumblr Connector */,
+				3BF0477E1758FDC70077F628 /* DropBox Connector */,
+				2E17D880174E6FD70067BB3B /* Connection Manager */,
+				2E17D883174E6FD70067BB3B /* Flickr Connector */,
+				2E17D884174E6FD70067BB3B /* Hash Crytpo */,
+				2E17D88B174E6FD70067BB3B /* OAuth 1 */,
+				2E17D896174E6FD70067BB3B /* Tokens */,
+				2E17D89B174E6FD70067BB3B /* Twitter Connector */,
+				2E17D89C174E6FD70067BB3B /* Yahoo Connector */,
+				2E0AD17F174D1351001B7BF2 /* Categories */,
+				2E0333FC174A86FD004380BF /* Constanst.h */,
+				2E3F51C117473F8800427CBC /* Supporting Files */,
+			);
+			path = OAuth1.0;
+			sourceTree = "<group>";
+		};
+		2E3F51C117473F8800427CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F51C217473F8800427CBC /* OAuth1.0-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E3F51D317473F8800427CBC /* OAuth1.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F51D917473F8800427CBC /* OAuth1_0Tests.h */,
+				2E3F51DA17473F8800427CBC /* OAuth1_0Tests.m */,
+				2E3F51D417473F8800427CBC /* Supporting Files */,
+			);
+			path = OAuth1.0Tests;
+			sourceTree = "<group>";
+		};
+		2E3F51D417473F8800427CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F51D517473F8800427CBC /* OAuth1.0Tests-Info.plist */,
+				2E3F51D617473F8800427CBC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BD20AE517D85CD200C9C510 /* Tumblr Connector */ = {
+			isa = PBXGroup;
+			children = (
+				3BD20AE617D85D0200C9C510 /* TumblrConnector.h */,
+				3BD20AE717D85D0200C9C510 /* TumblrConnector.m */,
+			);
+			name = "Tumblr Connector";
+			sourceTree = "<group>";
+		};
+		3BF0477E1758FDC70077F628 /* DropBox Connector */ = {
+			isa = PBXGroup;
+			children = (
+				3BF0477F1758FE6C0077F628 /* DropBoxConnector.h */,
+				3BF047801758FE6C0077F628 /* DropBoxConnector.m */,
+			);
+			name = "DropBox Connector";
+			path = DropBoxConnector;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E17D8B1174E7EA40067BB3B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E17D8B2174E7EAC0067BB3B /* OAuthManager.h in Headers */,
+				3BE5163A1751316B00B7B190 /* YahooConnector.h in Headers */,
+				3BD20AE817D85D0200C9C510 /* TumblrConnector.h in Headers */,
+				2E17D8B3174E7EAF0067BB3B /* FlickrConnector.h in Headers */,
+				2E17D8B6174E89070067BB3B /* TwitterConnector.h in Headers */,
+				3BF047811758FE6C0077F628 /* DropBoxConnector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2E3F517A17473F0100427CBC /* SociallyConnecting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E3F51B417473F0200427CBC /* Build configuration list for PBXNativeTarget "SociallyConnecting" */;
+			buildPhases = (
+				2E3F517717473F0100427CBC /* Sources */,
+				2E3F517817473F0100427CBC /* Frameworks */,
+				2E3F517917473F0100427CBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E3F51EA1747446000427CBC /* PBXTargetDependency */,
+			);
+			name = SociallyConnecting;
+			productName = SociallyConnecting;
+			productReference = 2E3F517B17473F0200427CBC /* SociallyConnecting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E3F51A117473F0200427CBC /* SociallyConnectingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E3F51B717473F0200427CBC /* Build configuration list for PBXNativeTarget "SociallyConnectingTests" */;
+			buildPhases = (
+				2E3F519D17473F0200427CBC /* Sources */,
+				2E3F519E17473F0200427CBC /* Frameworks */,
+				2E3F519F17473F0200427CBC /* Resources */,
+				2E3F51A017473F0200427CBC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E3F51A817473F0200427CBC /* PBXTargetDependency */,
+			);
+			name = SociallyConnectingTests;
+			productName = SociallyConnectingTests;
+			productReference = 2E3F51A217473F0200427CBC /* SociallyConnectingTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		2E3F51BD17473F8800427CBC /* OAuth1.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E3F51DC17473F8800427CBC /* Build configuration list for PBXNativeTarget "OAuth1.0" */;
+			buildPhases = (
+				2E3F51BA17473F8800427CBC /* Sources */,
+				2E3F51BB17473F8800427CBC /* Frameworks */,
+				2E3F51BC17473F8800427CBC /* CopyFiles */,
+				2E17D8B1174E7EA40067BB3B /* Headers */,
+				3B5079161751CEA4005EE0C5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OAuth1.0;
+			productName = OAuth1.0;
+			productReference = 2E3F51BE17473F8800427CBC /* libOAuth1.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E3F51CB17473F8800427CBC /* OAuth1.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E3F51DF17473F8800427CBC /* Build configuration list for PBXNativeTarget "OAuth1.0Tests" */;
+			buildPhases = (
+				2E3F51C717473F8800427CBC /* Sources */,
+				2E3F51C817473F8800427CBC /* Frameworks */,
+				2E3F51C917473F8800427CBC /* Resources */,
+				2E3F51CA17473F8800427CBC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E3F51D117473F8800427CBC /* PBXTargetDependency */,
+			);
+			name = OAuth1.0Tests;
+			productName = OAuth1.0Tests;
+			productReference = 2E3F51CC17473F8800427CBC /* OAuth1.0Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E3F517217473F0100427CBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SocialConnect;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = myCompany;
+			};
+			buildConfigurationList = 2E3F517517473F0100427CBC /* Build configuration list for PBXProject "SociallyConnecting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2E3F517017473F0100427CBC;
+			productRefGroup = 2E3F517C17473F0200427CBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E3F517A17473F0100427CBC /* SociallyConnecting */,
+				2E3F51A117473F0200427CBC /* SociallyConnectingTests */,
+				2E3F51BD17473F8800427CBC /* OAuth1.0 */,
+				2E3F51CB17473F8800427CBC /* OAuth1.0Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E3F517917473F0100427CBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F518A17473F0200427CBC /* InfoPlist.strings in Resources */,
+				2E3F519217473F0200427CBC /* Default.png in Resources */,
+				2E3F519417473F0200427CBC /* Default@2x.png in Resources */,
+				2E3F519617473F0200427CBC /* Default-568h@2x.png in Resources */,
+				2E3F519917473F0200427CBC /* MainStoryboard.storyboard in Resources */,
+				2E4EF96417509D8B00DB118C /* NTView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F519F17473F0200427CBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51AE17473F0200427CBC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F51C917473F8800427CBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51D817473F8800427CBC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E3F51A017473F0200427CBC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		2E3F51CA17473F8800427CBC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		3B5079161751CEA4005EE0C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${TARGET_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${TARGET_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/lib${TARGET_NAME}${CONFIGURATION}.a\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${TARGET_NAME}.framework\" &&\n\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${BUILD_DIR}/universal\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\"&&\ncp -r \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/headers\" \"${BUILD_DIR}/universal\"\ncp -r \"${BUILD_DIR}/Debug-iphoneuniversal/lib${PRODUCT_NAME}Debug.a\" \"${BUILD_DIR}/universal\"\ncp -r \"${BUILD_DIR}/Release-iphoneuniversal/lib${PRODUCT_NAME}Release.a\" \"${BUILD_DIR}/universal\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E3F517717473F0100427CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F518C17473F0200427CBC /* main.m in Sources */,
+				2E3F519017473F0200427CBC /* SocialConnectAppDelegate.m in Sources */,
+				2E3F519C17473F0200427CBC /* SocialConnectViewController.m in Sources */,
+				2E4EF95917509D3000DB118C /* TwitterViewController.m in Sources */,
+				2E4EF95C17509D4300DB118C /* FlickrViewController.m in Sources */,
+				2E4EF95F17509D5800DB118C /* YahooViewController.m in Sources */,
+				2E4EF96317509D8B00DB118C /* NTView.m in Sources */,
+				3BF04786175900CB0077F628 /* DropBoxControllerViewController.m in Sources */,
+				3BD20AEC17D85DA900C9C510 /* TumblrViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F519D17473F0200427CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51B117473F0200427CBC /* SociallyConnectingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F51BA17473F8800427CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0AD186174D1351001B7BF2 /* NSMutableURLRequest+Parameters.m in Sources */,
+				2E0AD187174D1351001B7BF2 /* NSString+URLEncoding.m in Sources */,
+				2E0AD188174D1351001B7BF2 /* NSURL+Base.m in Sources */,
+				2E17D89D174E6FD70067BB3B /* OAuthConnectionManager.m in Sources */,
+				2E17D89E174E6FD70067BB3B /* Base64Transcoder.c in Sources */,
+				2E17D89F174E6FD70067BB3B /* hmac.c in Sources */,
+				2E17D8A0174E6FD70067BB3B /* sha1.c in Sources */,
+				2E17D8A1174E6FD70067BB3B /* OARequestParameter.m in Sources */,
+				2E17D8A2174E6FD70067BB3B /* OAuthManager.m in Sources */,
+				2E17D8A3174E6FD70067BB3B /* OAuthRequiredParameter.m in Sources */,
+				2E17D8A4174E6FD70067BB3B /* OAuthSignature.m in Sources */,
+				2E17D8A5174E6FD70067BB3B /* WebAuthorization.m in Sources */,
+				2E17D8A6174E6FD70067BB3B /* OAuthAccessToken.m in Sources */,
+				2E17D8A7174E6FD70067BB3B /* OAuthConsumer.m in Sources */,
+				2E17D8AA174E752A0067BB3B /* FlickrConnector.m in Sources */,
+				2E17D8B0174E793F0067BB3B /* OAuthHeader.m in Sources */,
+				2E17D8B7174E89070067BB3B /* TwitterConnector.m in Sources */,
+				3BE5163B1751316B00B7B190 /* YahooConnector.m in Sources */,
+				3BF047821758FE6C0077F628 /* DropBoxConnector.m in Sources */,
+				3BD20AE917D85D0200C9C510 /* TumblrConnector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3F51C717473F8800427CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3F51DB17473F8800427CBC /* OAuth1_0Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E3F51A817473F0200427CBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E3F517A17473F0100427CBC /* SociallyConnecting */;
+			targetProxy = 2E3F51A717473F0200427CBC /* PBXContainerItemProxy */;
+		};
+		2E3F51D117473F8800427CBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E3F51BD17473F8800427CBC /* OAuth1.0 */;
+			targetProxy = 2E3F51D017473F8800427CBC /* PBXContainerItemProxy */;
+		};
+		2E3F51EA1747446000427CBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E3F51BD17473F8800427CBC /* OAuth1.0 */;
+			targetProxy = 2E3F51E91747446000427CBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E3F518817473F0200427CBC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3F518917473F0200427CBC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2E3F519717473F0200427CBC /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3F519817473F0200427CBC /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		2E3F51AC17473F0200427CBC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3F51AD17473F0200427CBC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2E3F51D617473F8800427CBC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3F51D717473F8800427CBC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E3F51B217473F0200427CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E3F51B317473F0200427CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E3F51B517473F0200427CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SociallyConnecting/SociallyConnecting-Prefix.pch";
+				INFOPLIST_FILE = "SociallyConnecting/SociallyConnecting-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2E3F51B617473F0200427CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SociallyConnecting/SociallyConnecting-Prefix.pch";
+				INFOPLIST_FILE = "SociallyConnecting/SociallyConnecting-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2E3F51B817473F0200427CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SociallyConnecting.app/SociallyConnecting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SociallyConnecting/SociallyConnecting-Prefix.pch";
+				INFOPLIST_FILE = "SociallyConnectingTests/SociallyConnectingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2E3F51B917473F0200427CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SociallyConnecting.app/SociallyConnecting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SociallyConnecting/SociallyConnecting-Prefix.pch";
+				INFOPLIST_FILE = "SociallyConnectingTests/SociallyConnectingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		2E3F51DD17473F8800427CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/OAuth1_0.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuth1.0/OAuth1.0-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = headers;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		2E3F51DE17473F8800427CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/OAuth1_0.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuth1.0/OAuth1.0-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = headers;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		2E3F51E017473F8800427CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuth1.0/OAuth1.0-Prefix.pch";
+				INFOPLIST_FILE = "OAuth1.0Tests/OAuth1.0Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2E3F51E117473F8800427CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuth1.0/OAuth1.0-Prefix.pch";
+				INFOPLIST_FILE = "OAuth1.0Tests/OAuth1.0Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E3F517517473F0100427CBC /* Build configuration list for PBXProject "SociallyConnecting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E3F51B217473F0200427CBC /* Debug */,
+				2E3F51B317473F0200427CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E3F51B417473F0200427CBC /* Build configuration list for PBXNativeTarget "SociallyConnecting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E3F51B517473F0200427CBC /* Debug */,
+				2E3F51B617473F0200427CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E3F51B717473F0200427CBC /* Build configuration list for PBXNativeTarget "SociallyConnectingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E3F51B817473F0200427CBC /* Debug */,
+				2E3F51B917473F0200427CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E3F51DC17473F8800427CBC /* Build configuration list for PBXNativeTarget "OAuth1.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E3F51DD17473F8800427CBC /* Debug */,
+				2E3F51DE17473F8800427CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E3F51DF17473F8800427CBC /* Build configuration list for PBXNativeTarget "OAuth1.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E3F51E017473F8800427CBC /* Debug */,
+				2E3F51E117473F8800427CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E3F517217473F0100427CBC /* Project object */;
+}

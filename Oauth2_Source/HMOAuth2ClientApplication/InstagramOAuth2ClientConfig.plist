@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ServiceProvider</key>
+	<string>Instagram</string>
+	<key>ClientID</key>
+	<string>z4ehwni1xfn3lpg</string>
+	<key>ClientSecret</key>
+	<string>d66swskbnr3qgq6</string>
+	<key>RedirectURL</key>
+	<string>localhost</string>
+	<key>UserURL</key>
+	<string>https://www.dropbox.com/1/oauth2/authorize</string>
+	<key>TokenURL</key>
+	<string>https://api.dropbox.com/1/oauth2/token</string>
+	<key>AccessTokenAdditionalParams</key>
+	<dict>
+		<key>response_type</key>
+		<string>code</string>
+		<key>type</key>
+		<string>web_server</string>
+	</dict>
+	<key>ExchangeAccessTokenParams</key>
+	<dict>
+		<key>grant_type</key>
+		<string>authorization_code</string>
+		<key>type</key>
+		<string>code</string>
+	</dict>
+	<key>RefreshTokenParams</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>New item - 2</key>
+		<string></string>
+		<key>New item - 4</key>
+		<string></string>
+		<key>New item - 3</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

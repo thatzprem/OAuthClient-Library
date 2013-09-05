@@ -1,0 +1,702 @@
+//
+//  OAuth2Client.m
+//  OAuth2Client
+//
+/**
+ Created by Prem on 12/03/13.
+ Copyright (c) 2013 Happiest Minds Technologies Pvt Ltd.
+ This program is not to be copied or distributed without the express written consent of Happiest Minds. All rights reserved.
+ */
+
+#import "OAuth2Client.h"
+#import "NSURL+QueryInspector.h"
+#import "OAuth2AccessToken.h"
+#import "OAuth2ClientURLRequestOperation.h"
+#import "NSDictionary+QueryString.h"
+#import "OAuth2AccessToken.h"
+#import "HMLogManager.h"
+#import "PlistHelper.h"
+#import "HMOAuthConstants.h"
+
+#pragma mark -
+//#define Test Test
+@interface OAuth2Client()
+
+/**
+ NSDictionary object to hold the details of the config file in a dictionary format with in the application.
+ */
+@property(nonatomic,strong)NSDictionary *oAuthConfigDictionary;
+
+/**
+ Set the class properties with values available in the dictionary object.
+ */
+- (void)setClassPropertiesWithDictionaryValues;
+
+/**
+ initialization for the properties which do not take value from oAuthConfigDictionary. 
+ */
+- (void)initOtherClassProperties;
+
+/**
+ Method to create an instance of the accesstoken class and notify the respective delegate methods.
+ @param authDataInDictionary, the Oauth response data converted as an dictionary
+ @return, void
+ */
+- (void)createAccessTokenObjectAndNotifyDelegateMethod:(NSDictionary*)authDataInDictionary;
+
+
+/**
+ Method to check the if the webview received if not nil or empty.
+ @param webView, the reveived web view from the application.
+ @return BOOL, true if web is not nil and proper delegate is set. false otherwise.
+ */
+- (BOOL)webViewEmptyOrNilCheck:(UIWebView*)webView;
+
+- (void)applicationDelegateSetCheck:(NSError **)error;
+
+
+
+@end
+
+@implementation OAuth2Client {
+    
+/**
+ A build in objective C network class instance to manage the network related operations.
+ */
+  NSOperationQueue *_networkQueue;
+    
+}
+
+@synthesize clientID;
+@synthesize clientSecret;
+@synthesize redirectURL;
+@synthesize cancelURL;
+@synthesize userURL;
+@synthesize tokenURL;
+@synthesize delegate;
+@synthesize accessToken;
+@synthesize debug;
+
+@synthesize oAuthConfigDictionary;
+
+#pragma mark Initialization
+
+- (id)initOAuth2ClientComponent{
+    
+    if (self = [super init]) {
+        
+        self.oAuthConfigDictionary = [[NSDictionary alloc] initWithDictionary:[self getConfigurationPlistData] copyItems:YES];
+        HMLogger_Info(@"OAuth configuration dictionary details: %@",self.oAuthConfigDictionary);
+    
+        [self setClassPropertiesWithDictionaryValues]; //Set the class properties with Dictionary values.
+        [self initOtherClassProperties]; //Set other class properties.
+        
+    }
+    return self;
+}
+
+- (void)initOtherClassProperties{
+    
+    requests = [[NSMutableArray alloc] init];
+    debug = NO;
+    _networkQueue = [[NSOperationQueue alloc] init];
+    
+    
+}
+
+- (void)dealloc;
+{
+    [_networkQueue cancelAllOperations];
+}
+
+
+#pragma mark Plist to Dictionary Configuration
+
+- (NSDictionary *)getConfigurationPlistData
+{
+    start_time();
+    HMLogger_Info(@"Getting details from configuration plist file...");
+    
+    PlistHelper *plistHelper  = [[PlistHelper alloc]init];
+    BOOL result = FALSE;
+    
+    HMLogger_Info(@"Config file name: %@",OAUTH2_CONFIG_FILENAME);
+    HMLogger_Info(@"Config file extention: %@",OAUTH2_CONFIG_FILE_EXTENSION);
+    
+    result = [plistHelper copyResourceToDocDir:OAUTH2_CONFIG_FILENAME andResourceType:OAUTH2_CONFIG_FILE_EXTENSION];
+    
+    if (result) HMLogger_Info(@"Copying resource file to the docs directory successfull...");
+    else HMLogger_Error(@"Copying resource file to the docs directory failed...");
+    
+    //Get the plist details in a dictionary.
+    NSDictionary *configurationDictionary = [NSDictionary dictionaryWithDictionary:[plistHelper getDatafromPlist:[NSString stringWithFormat:@"%@.%@",OAUTH2_CONFIG_FILENAME,OAUTH2_CONFIG_FILE_EXTENSION]]];
+    
+    //Logging plist data
+    HMLogger_Debug(@"OAUTH CONFIG FILE DETAILS: %@",configurationDictionary);
+    
+    end_time();
+    
+    return configurationDictionary;
+}
+
+
+- (void)setClassPropertiesWithDictionaryValues
+{
+    start_time();
+    HMLogger_Info(@"Setting class properties with dictionary values...");
+    
+    HMLogger_Debug(@"Configuration dictionary values:%@",self.oAuthConfigDictionary);
+            
+    clientID        =   [self.oAuthConfigDictionary valueForKey:@"ClientID"];
+    clientSecret    =   [self.oAuthConfigDictionary valueForKey:@"ClientSecret"];
+    redirectURL     =   [NSURL URLWithString:[self.oAuthConfigDictionary valueForKey:@"RedirectURL"]];
+    userURL         =   [NSURL URLWithString:[self.oAuthConfigDictionary valueForKey:@"UserURL"]];
+    tokenURL        =   [NSURL URLWithString:[self.oAuthConfigDictionary valueForKey:@"TokenURL"]];;
+    
+    HMLogger_Debug(@"Class property values after assigning from the dictionary");
+    HMLogger_Debug(@"ClientID:%@",self.clientID);
+    HMLogger_Debug(@"ClientSecret:%@",self.clientSecret);
+    HMLogger_Debug(@"RedirectURL:%@",self.redirectURL);
+    HMLogger_Debug(@"UserURL:%@",self.userURL);
+    HMLogger_Debug(@"TokenURL:%@",self.tokenURL);
+    
+    end_time();
+    
+}
+
+#pragma mark -
+#pragma mark Authorization
+
+- (NSURLRequest *)getAccessCodeRequest
+{
+    start_time();
+    HMLogger_Info(@"Forming Access code request...");
+    NSDictionary *accessCodeParams = [NSMutableDictionary dictionary];
+    
+    //Retreive the Additional Access code request parameters from oAuthConfigDictionary
+    NSDictionary *accessCodeAdditionalParamsDictionary = [self.oAuthConfigDictionary valueForKey:@"AccessCodeRequestParams"];
+    
+  [accessCodeParams setValue:clientID forKey:@"client_id"];
+  [accessCodeParams setValue:[redirectURL absoluteString] forKey:@"redirect_uri"];
+  
+    //Below 3 lines parse the all the keys in accessCodeAdditionalParamsDictionary
+    // And adds it to the accessCodeParams dictionary.
+  if (accessCodeAdditionalParamsDictionary) {
+    for (NSString *key in accessCodeAdditionalParamsDictionary) {
+      [accessCodeParams setValue:[accessCodeAdditionalParamsDictionary valueForKey:key] forKey:key];
+    }
+  }
+    
+    HMLogger_Debug(@"accessCodeAdditionalParamsDictionary details: %@",accessCodeAdditionalParamsDictionary);
+    HMLogger_Debug(@"AccessCodeParams formed= %@",accessCodeParams);
+    
+  NSURL *fullURL = [NSURL URLWithString:[[self.userURL absoluteString] stringByAppendingFormat:@"?%@", [accessCodeParams stringWithFormEncodedComponents]]];
+  NSMutableURLRequest *authRequest = [NSMutableURLRequest requestWithURL:fullURL];
+  [authRequest setHTTPMethod:@"GET"];
+    
+    HMLogger_Debug(@"AccessCode request full URL = %@",fullURL);
+    HMLogger_Info(@"AccessCode request = %@",authRequest);
+    
+    end_time();
+    
+  return [authRequest copy];
+}
+
+#pragma mark Exchange for Access token
+
+- (void)verifyAuthorizationWithAccessCode:(NSString *)accessCode;
+{
+    start_time();
+    
+    HMLogger_Info(@"Exchanging Access code for Access token...");
+    
+    NSDictionary *accessTokenAdditionalParams = [self.oAuthConfigDictionary valueForKey:@"ExchangeAccessTokenParams"];
+    
+  @synchronized(self) {
+    if (isVerifying) return; // don't allow more than one auth request
+    
+    isVerifying = YES;
+    
+    NSDictionary *accessTokenParams = [NSMutableDictionary dictionary];
+      
+    [accessTokenParams setValue:clientID forKey:@"client_id"];
+    [accessTokenParams setValue:clientSecret forKey:@"client_secret"];
+    [accessTokenParams setValue:[redirectURL absoluteString] forKey:@"redirect_uri"];
+    [accessTokenParams setValue:accessCode forKey:@"code"];
+      
+      
+      //Below 3 lines parse the all the keys in accessTokenAdditionalParams
+      //dictionary and add it to the accessTokenParams dictionary.
+      if (accessTokenAdditionalParams) {
+          for (NSString *key in accessTokenAdditionalParams) {
+              [accessTokenParams setValue:[accessTokenAdditionalParams valueForKey:key] forKey:key];
+          }
+      }
+    
+      HMLogger_Debug(@"accessTokenAdditionalParams details: %@",accessTokenAdditionalParams);
+      HMLogger_Debug(@"AccessCodeParams formed= %@",accessTokenParams);
+      
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:self.tokenURL];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:[[accessTokenParams stringWithFormEncodedComponents] dataUsingEncoding:NSUTF8StringEncoding]];
+      
+      HMLogger_Info(@"Access token request: %@",request);
+      
+    OAuth2ClientURLRequestOperation *operation = [[OAuth2ClientURLRequestOperation alloc] initWithURLRequest:request];
+
+    __unsafe_unretained id blockOperation = operation;
+
+    [operation setCompletionBlock:^{
+      [self handleCompletionForAuthorizationRequestOperation:blockOperation];
+    }];
+      
+    [_networkQueue addOperation:operation];
+      
+      end_time();
+      
+  }
+}
+
+#pragma mark Refresh Access Token
+
+//TODO: Refresh access token feature implementation is in progress....
+- (void)refreshAccessToken:(OAuth2AccessToken *)_accessToken additionalParameters:(NSDictionary *)additionalParameters serviceProviderID:(int)serviceProvider;
+{
+
+    
+    [[HMLogManager getSharedInstance] info:@"REFRESHING ACCESS TOKEN..."];
+    [[HMLogManager getSharedInstance] debugWithLoggableObject:_accessToken];
+    
+    
+    //Forming the refresh POST URL.
+    NSDictionary *params = [NSMutableDictionary dictionary];
+  [params setValue:@"refresh_token" forKey:@"grant_type"];
+  [params setValue:clientID forKey:@"client_id"];
+  [params setValue:clientSecret forKey:@"client_secret"];
+  [params setValue:[redirectURL absoluteString] forKey:@"redirect_uri"];
+  [params setValue:_accessToken.refreshToken forKey:@"refresh_token"];
+
+    if (additionalParameters) {
+        for (NSString *key in additionalParameters) {
+            [params setValue:[additionalParameters valueForKey:key] forKey:key];
+        }
+    }
+
+        
+  NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:self.tokenURL];
+  [request setHTTPMethod:@"POST"];
+  [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+  [request setHTTPBody:[[params stringWithFormEncodedComponents] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [[HMLogManager getSharedInstance] debug:@"Refresh token request URL:%@",request];
+    
+  OAuth2ClientURLRequestOperation *operation = [[OAuth2ClientURLRequestOperation alloc] initWithURLRequest:request];
+  
+  __unsafe_unretained id blockOperation = operation;
+  
+  [operation setCompletionBlock:^{
+    [self handleCompletionForAuthorizationRequestOperation:blockOperation];
+  }];
+  
+  [_networkQueue addOperation:operation];
+}
+
+
+#pragma mark Response Handler Methods
+
+- (void)handleCompletionForAuthorizationRequestOperation:(OAuth2ClientURLRequestOperation *)operation
+{
+    
+    start_time();
+    
+    //Return if the operation object is nil.
+    if (!operation) {
+        
+        HMLogger_Info(@"Received operation object is nil...");
+        return;
+    }
+
+    NSHTTPURLResponse *response = [self getResponseObjectFromOperationObject:operation];
+    
+    //Check and return if the response data is nil.
+    if (response == nil) {
+        
+        HMLogger_Info(@"Response object is nil...");
+        return;
+    }
+    
+    //Check and return if there is an connection error.
+    if (operation.connectionError) {
+        
+        HMLogger_Error(@"Localized string for status code = %@",[NSHTTPURLResponse localizedStringForStatusCode:response.statusCode]);
+        HMLogger_Error(@"Connection error: %@",operation.connectionError);
+        return;
+    }
+    
+    //Check if the response is a success or failure response.
+    if ([self isSuccessOrFailureResponse:response]) {
+      
+      NSDictionary *authDict;
+      
+      authDict = [self convertResponseDataToDictionary:operation];
+      
+        //Check if the dictionary has Access token parameter.
+      if ([self checkForAccessTokenInDictionary:authDict])
+          [self createAccessTokenObjectAndNotifyDelegateMethod:authDict]; //Create an access token object and notify delegate.
+    }
+    
+    end_time();
+
+}
+
+//FIXME- define this method.
+- (NSDictionary *)convertResponseDataToDictionary:(OAuth2ClientURLRequestOperation *)operationObject{
+    
+    NSDictionary *authData;
+    
+    @try {
+        
+        if ([self NSJSONSerializationDataParsing:operationObject])
+            authData = [self NSJSONSerializationDataParsing:operationObject];
+            
+        else if ([self queryStringDecodeParsingMechanism:operationObject])
+            authData = [self queryStringDecodeParsingMechanism:operationObject];
+        else
+            HMLogger_Error(@"Both Parser mechanism failed...");
+
+    }
+    @catch (NSException *exception) {
+        
+        HMLogger_Error(@"Exception in parsing the response data...");
+    }
+    @finally {
+        
+        return authData;
+    }
+
+}
+
+//FIXME- define this method.
+- (NSHTTPURLResponse*)getResponseObjectFromOperationObject:(OAuth2ClientURLRequestOperation *)receivedOperationObject{
+    
+    HMLogger_Debug(@"Received Operation Object: %@",receivedOperationObject);
+    
+    NSHTTPURLResponse *response;
+    
+    @try {
+        
+        response = (NSHTTPURLResponse *)receivedOperationObject.URLResponse;
+        HMLogger_Info(@"Response code status: %d",response.statusCode);
+        HMLogger_Info(@"Response header field: %@",response.allHeaderFields);
+    }
+    @catch (NSException *exception) {
+        
+        HMLogger_Error(@"Exception accessing the received response data with error :%@",[exception description]);
+        response = nil; //Nullifying the response object incase of exceptions.
+        
+    }
+    @finally {
+        
+        //return the response or else return nil;
+        if (response)
+            return response;
+        else
+            return nil;
+    }
+}
+#pragma mark Response Parser methods
+
+//FIXME- define this method.
+- (NSDictionary*)NSJSONSerializationDataParsing:(OAuth2ClientURLRequestOperation *)operationObject{
+    
+    
+    NSError *parserError;
+    
+    //Creating a dictionary object from JSON data.
+    NSDictionary *authData = [NSJSONSerialization JSONObjectWithData:operationObject.responseData options:0 error:&parserError];
+    
+    if (authData)
+        return authData;
+    else
+        return nil;
+
+}
+
+//FIXME- define this method.
+- (NSDictionary*)queryStringDecodeParsingMechanism:(OAuth2ClientURLRequestOperation *)operationObject{
+    
+    
+    NSString *responseString = [[NSString alloc] initWithData:operationObject.responseData encoding:NSUTF8StringEncoding];
+    
+    NSDictionary *authData = [NSDictionary dictionaryWithFormEncodedString:responseString];
+    
+    if (authData)
+        return authData;
+    else
+        return nil;
+    
+}
+
+//FIXME- define this method.
+- (void)createAccessTokenObjectAndNotifyDelegateMethod:(NSDictionary*)authDataInDictionary{
+    
+    start_time();
+    HMLogger_Info(@"Creating access token object and notifying the respective delegate methods...");
+    HMLogger_Debug(@"Received authDataInDictionary: %@",authDataInDictionary);
+    
+    if (accessToken == nil) {
+        HMLogger_Info(@"Adding access token in acessToken object...");
+
+        accessToken = [[OAuth2AccessToken alloc] initWithAuthorizationResponse:authDataInDictionary];
+    
+        HMLogger_LogableObject_Debug(accessToken);
+        
+        if ([self.delegate respondsToSelector:@selector(oauthClientDidReceiveAccessToken:)]) {
+            HMLogger_Info(@"Notifying through oauthClientDidReceiveAccessToken...");
+            [self.delegate oauthClientDidReceiveAccessToken:self];
+        }
+    } else {
+        HMLogger_Info(@"Updating access token in acessToken object...");
+        //[accessToken refreshFromAuthorizationResponse:authData serviceProvider:serviceProviderID]; //Implementation in progress...
+        if ([self.delegate respondsToSelector:@selector(oauthClientDidRefreshAccessToken:)]) {
+            HMLogger_Info(@"Notifying through oauthClientDidRefreshAccessToken...");
+            [self.delegate oauthClientDidRefreshAccessToken:self];
+        }
+    }
+}
+
+#pragma mark Response Status Check Methods
+
+//FIXME- define this method.
+- (BOOL)isSuccessOrFailureResponse:(NSHTTPURLResponse *)response{
+    
+    HMLogger_Debug(@"Received response: %@",response);
+    
+    if (response.statusCode == ACCESS_TOKEN_SUCCESS_RESPONSE_STATUSCODE) {
+        
+        HMLogger_Info(@"Success response! Code: %d",response.statusCode);
+        return TRUE;
+    }
+    else{
+        
+        HMLogger_Info(@"Failure response! Code: %d",response.statusCode);
+        return FALSE;
+    }
+    
+}
+
+//FIXME- define this method.
+-(BOOL)checkForAccessTokenInDictionary:(NSDictionary*)dictionary{
+    
+    BOOL status;
+    
+    if (dictionary) {
+        
+        if ([dictionary objectForKey:@"access_token"]) {
+            HMLogger_Info(@"Access token value found...");
+            status = TRUE;
+        }
+        else{
+            NSAssert(NO, @"Unhandled parsing failure");
+            HMLogger_Error(@"Parsing failure for key: access_token");
+            status = FALSE;
+        }
+    }
+    else
+        status = FALSE;
+    
+    return status;
+
+}
+
+@end
+
+
+@implementation OAuth2Client (UIWebViewIntegration)
+
+#pragma mark Web View Integeration methods
+
+- (void)authorizeUsingWebView:(UIWebView *)webView errorObject:(NSError **)error;
+{
+    start_time();
+
+    [self applicationDelegateSetCheck:error]; // First check if the application delegate is set?
+    
+    if ([self webViewEmptyOrNilCheck:webView errorObject:error]) { //Check if a empty/nil web view is received?
+        
+        [self authorizeUsingWebView:webView additionalParameters:[self.oAuthConfigDictionary valueForKey:@"AccessTokenAdditionalParams"]]; // Calling other method with additional params details.
+    }
+        
+    end_time();
+}
+
+#pragma mark WebView Validation Methods
+
+- (BOOL)webViewEmptyOrNilCheck:(UIWebView*)webView errorObject:(NSError **)error{
+    
+    if (webView) {
+        HMLogger_Info(@"Web view is not nil...");
+        
+        [webView setDelegate:self]; //Setting webview delegate.
+        
+        if (webView.delegate) {
+            HMLogger_Info(@"Web view delegate is set...");
+            return YES;
+        }
+        else{
+            HMLogger_Error(@"Web view delegate is not set...");
+            *error = [NSError errorWithDomain:@"Web view delegate is not set..." code:200 userInfo:nil];
+            
+            return NO;
+        }
+    }
+    else{
+        HMLogger_Error(@"Didn't receive any webview reference...");
+        *error = [NSError errorWithDomain:@"Webview object found Invalid or unavilable for access!" code:201 userInfo:nil];
+
+        return NO;
+    }
+}
+
+- (void)applicationDelegateSetCheck:(NSError **)error{
+    
+    if (self.delegate) {
+        
+        HMLogger_Info(@"Application delegate is set to get the call back...");
+    }
+    else{
+        
+        HMLogger_Info(@"Application delegate is not set");
+        
+        HMLogger_Error(@"Applcation is not set... Returning with exception...");
+        
+        *error = [NSError errorWithDomain:@"Application delegate not set!" code:202 userInfo:nil];
+
+    }
+    
+}
+
+- (void)authorizeUsingWebView:(UIWebView *)webView additionalParameters:(NSDictionary *)additionalParameters;
+{
+    start_time();
+    
+    [webView loadRequest:[self getAccessCodeRequest]]; //Requesting access code request.
+    HMLogger_Info(@"Requesting for Access token");
+    
+    end_time();
+    
+
+}
+
+#pragma mark WebView Delegate Methods
+
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+{
+    start_time();
+    
+    HMLogger_Info(@"WebView Delegate: shouldStartLoadWithRequest....");
+    
+
+  if ([[request.URL absoluteString] hasPrefix:[self.redirectURL absoluteString]]) {
+      
+      HMLogger_Info(@"Web view request URL has redirect URL prefix...");
+      [self extractAccessCodeFromCallbackURL:request.URL];
+      return NO;
+      
+  } else if (self.cancelURL && [[request.URL absoluteString] hasPrefix:[self.cancelURL absoluteString]]) {
+    if ([self.delegate respondsToSelector:@selector(oauthClientDidCancel:)]) {
+      [self.delegate oauthClientDidCancel:self];
+    }
+    
+    return NO;
+  }
+  
+  if ([self.delegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)]) {
+      //FIX ME check this implementation..
+    return [self.delegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
+  }
+  
+    end_time();
+    
+  return YES;
+}
+
+/**
+ * custom URL schemes will typically cause a failure so we should handle those here
+ */
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    HMLogger_Info(@"WebView Delegate: didFailLoadWithError....%@",[error description]);
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_3_2
+  NSString *failingURLString = [error.userInfo objectForKey:NSErrorFailingURLStringKey];
+#else
+  NSString *failingURLString = [error.userInfo objectForKey:NSURLErrorFailingURLStringErrorKey];
+#endif
+  
+  if ([failingURLString hasPrefix:[self.redirectURL absoluteString]]) {
+    [webView stopLoading];
+    [self extractAccessCodeFromCallbackURL:[NSURL URLWithString:failingURLString]];
+  } else if (self.cancelURL && [failingURLString hasPrefix:[self.cancelURL absoluteString]]) {
+    [webView stopLoading];
+    if ([self.delegate respondsToSelector:@selector(oauthClientDidCancel:)]) {
+      [self.delegate oauthClientDidCancel:self];
+    }
+  }
+  
+  if ([self.delegate respondsToSelector:@selector(webView:didFailLoadWithError:)]) {
+    [self.delegate webView:webView didFailLoadWithError:error];
+  }
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    
+    HMLogger_Info(@"WebView Delegate: webViewDidStartLoad....");
+
+  if ([self.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
+    [self.delegate webViewDidStartLoad:webView];
+  }
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+    HMLogger_Info(@"WebView Delegate: webViewDidFinishLoad....");
+
+  if ([self.delegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
+    [self.delegate webViewDidFinishLoad:webView];
+  }
+}
+
+#pragma mark Extract Access code
+
+- (void)extractAccessCodeFromCallbackURL:(NSURL *)callbackURL;
+{
+    HMLogger_Info(@"Extracting access code from Call back URL");
+    HMLogger_Debug(@"Call back URL with Access code: %@",callbackURL);
+    
+  NSString *accessCode = [[callbackURL queryDictionary] valueForKey:@"code"];
+    
+    if (accessCode) {
+        HMLogger_Info(@"Access code value is not nil...");
+        HMLogger_Debug(@"Reveived access code:%@",accessCode);
+        
+        //FIX ME : Move to a different method.
+        [self verifyAuthorizationWithAccessCode:accessCode];
+        
+        if ([self.delegate respondsToSelector:@selector(oauthClientDidReceiveAccessCode:)]) {
+            [self.delegate oauthClientDidReceiveAccessCode:self];
+        }
+
+    }
+    else{
+        //FIX ME throw exceptions
+        HMLogger_Error(@"Access code value is nil...");
+    }
+    
+}
+
+@end

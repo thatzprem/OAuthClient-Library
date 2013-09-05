@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ServiceProvider</key>
+	<string>Instagram</string>
+	<key>ClientID</key>
+	<string>4ea7089633d34f3f91605fbe478da07a</string>
+	<key>ClientSecret</key>
+	<string>6a38c45b64f346b19b83eb038d508ee3</string>
+	<key>RedirectURL</key>
+	<string>http://www.happiestminds.com/</string>
+	<key>UserURL</key>
+	<string>https://api.instagram.com/oauth/authorize</string>
+	<key>TokenURL</key>
+	<string>https://api.instagram.com/oauth/access_token</string>
+	<key>AccessTokenAdditionalParams</key>
+	<dict>
+		<key>response_type</key>
+		<string>code</string>
+		<key>state</key>
+		<string>DCEEFWF45453sdffef424</string>
+		<key>type</key>
+		<string>web_server</string>
+	</dict>
+	<key>ExchangeAccessTokenParams</key>
+	<dict>
+		<key>grant_type</key>
+		<string>authorization_code</string>
+		<key>type</key>
+		<string>code</string>
+	</dict>
+	<key>RefreshTokenParams</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>New item - 2</key>
+		<string></string>
+		<key>New item - 4</key>
+		<string></string>
+		<key>New item - 3</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

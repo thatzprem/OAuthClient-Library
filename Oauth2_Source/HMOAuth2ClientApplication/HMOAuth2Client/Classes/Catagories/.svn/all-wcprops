@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories
+END
+NSURL+QueryInspector.h
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories/NSURL+QueryInspector.h
+END
+NSDictionary+QueryString.h
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories/NSDictionary+QueryString.h
+END
+NSString+QueryString.h
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories/NSString+QueryString.h
+END
+NSURL+QueryInspector.m
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories/NSURL+QueryInspector.m
+END
+NSDictionary+QueryString.m
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories/NSDictionary+QueryString.m
+END
+NSString+QueryString.m
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/Catagories/NSString+QueryString.m
+END

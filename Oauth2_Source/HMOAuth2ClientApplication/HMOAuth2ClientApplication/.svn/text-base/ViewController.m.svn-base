@@ -1,0 +1,84 @@
+//
+//  HMViewController.m
+//  HMOAuth2ClientApplication
+//
+//  Created by Prem kumar on 18/04/13.
+//  Copyright (c) 2013 happiestminds. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "HMLogManager.h"
+#import "OAuth2Client.h"
+#import "LROAuth2ClientDelegate.h"
+
+@interface ViewController ()<OAuth2ClientDelegate>{
+
+    OAuth2Client *oAuthClient;
+    
+}
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
+    //  FB
+//    hmOAuth2Client = [[HMOAuth2Client alloc]initWithClientID:@"175384205951500" secret:@"60b5be3b6f04f12f4f41e9909a865530" redirectURL:[NSURL URLWithString:@"http://www.happiestminds.com/"]];
+    
+    //    LinkedIn
+//    hmOAuth2Client = [[HMOAuth2Client alloc]initWithClientID:@"4zvpanw75ree" secret:@"HiM77InKOYJlAKds" redirectURL:[NSURL URLWithString:@"http://www.happiestminds.com/"]];
+//    
+//    //    Google    
+////    hmOAuth2Client = [[HMOAuth2Client alloc]initWithClientID:@"756925236655-4ufia44a8pgnmpr4t9iofsu2mc7sormf.apps.googleusercontent.com" secret:@"GdWbDzDJ_1a_gIMhIDoDEDLN" redirectURL:[NSURL URLWithString:@"https://www.mycoolwebsite.com/oauth2callback"]];
+//    
+//    hmOAuth2Client.serviceProvider = OAUTH2_LINKEDIN;
+//    
+//    hmOAuth2Client.delegate = self;
+    
+    
+//    [hmOAuth2Client authorizeUsingWebView:self.webView];
+    
+    oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponent];
+    oAuthClient.delegate = self;
+    
+    NSError *error;
+    [oAuthClient authorizeUsingWebView:self.webView errorObject:&error];
+    
+    HMLogger_Info(@"%@",error);
+//    [oAuthClient authorizeUsingWebView:nil];
+    
+}
+
+- (void)oauthClientDidReceiveAccessToken:(OAuth2Client *)client{
+    
+    NSString *accessTokenString = [NSString stringWithFormat:@"%@",client.accessToken];
+    NSLog(@"access Token string = %@",accessTokenString);
+    
+    //  Testing Refresh Token.
+    
+    //  HMLogManager *logger = [HMLogManager getSharedInstance];
+    //  [logger infoWithLoggableObject:client.accessToken];
+//     [oAuthClient refreshAccessToken:client.accessToken additionalParameters:nil serviceProviderID:2];
+    
+    
+}
+- (void)oauthClientDidRefreshAccessToken:(OAuth2Client *)client{
+    
+    NSString *accessTokenString = [NSString stringWithFormat:@"%@",client.accessToken];
+    NSLog(@"Refreshed Token string = %@",accessTokenString);
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
+@end

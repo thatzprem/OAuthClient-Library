@@ -1,0 +1,97 @@
+//
+//  OAuth2AccessToken.m
+//  OAuth2Client
+//
+/**
+ Created by Prem on 12/03/13.
+ Copyright (c) 2013 Happiest Minds Technologies Pvt Ltd.
+ This program is not to be copied or distributed without the express written consent of Happiest Minds. All rights reserved.
+ */
+#import "OAuth2AccessToken.h"
+
+@interface OAuth2AccessToken ()
+@property (nonatomic, copy) NSDictionary *authResponseData;
+- (void)extractExpiresAtFromResponse;
+@end
+
+#pragma mark -
+
+@implementation OAuth2AccessToken
+
+@dynamic accessToken;
+@dynamic refreshToken;
+@synthesize authResponseData;
+@synthesize expiresAt;
+
+- (id)initWithAuthorizationResponse:(NSDictionary *)data;
+{
+  if (self = [super init]) {
+    authResponseData = [data copy];
+    [self extractExpiresAtFromResponse];    
+  }
+  return self;
+}
+
+
+- (NSString *)description;
+{
+  return [NSString stringWithFormat:@"<LROAuth2AccessToken token:%@ expiresAt:%@>", self.accessToken, self.expiresAt];
+}
+
+- (BOOL)hasExpired;
+{
+  return ([[NSDate date] earlierDate:expiresAt] == expiresAt);
+}
+
+- (void)refreshFromAuthorizationResponse:(NSDictionary *)data;
+{
+    NSMutableDictionary *tokenData = [self.authResponseData mutableCopy];
+    
+    [tokenData setObject:[data valueForKey:@"access_token"] forKey:@"access_token"];
+    [tokenData setObject:[data objectForKey:@"expires_in"]  forKey:@"expires_in"];
+    
+    [self setAuthResponseData:tokenData];
+    [self extractExpiresAtFromResponse];
+    
+    HMLogger_LogableObject_Debug(self);
+    
+}
+
+- (void)extractExpiresAtFromResponse
+{
+  NSTimeInterval expiresIn = (NSTimeInterval)[[self.authResponseData objectForKey:@"expires_in"] intValue];
+  expiresAt = [[NSDate alloc] initWithTimeIntervalSinceNow:expiresIn];
+}
+
+#pragma mark -
+#pragma mark Dynamic accessors
+
+- (NSString *)accessToken;
+{
+  return [authResponseData objectForKey:@"access_token"];
+}
+
+- (NSString *)refreshToken;
+{
+  return [authResponseData objectForKey:@"refresh_token"];
+}
+
+#pragma mark -
+#pragma mark NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+  [aCoder encodeObject:authResponseData forKey:@"data"];
+  [aCoder encodeObject:expiresAt forKey:@"expiresAt"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  if (self = [super init]) {
+    authResponseData = [[aDecoder decodeObjectForKey:@"data"] copy];
+    expiresAt = [aDecoder decodeObjectForKey:@"expiresAt"];
+  }
+  return self;
+}
+
+@end

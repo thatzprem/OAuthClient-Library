@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes
+END
+LROAuth2ClientDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/LROAuth2ClientDelegate.h
+END
+OAuth2AccessToken.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/OAuth2AccessToken.m
+END
+OAuth2ClientURLRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/OAuth2ClientURLRequestOperation.h
+END
+OAuth2Client.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/OAuth2Client.h
+END
+OAuth2ClientURLRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/OAuth2ClientURLRequestOperation.m
+END
+OAuth2AccessToken.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/OAuth2AccessToken.h
+END
+OAuth2Client.m
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/Classes/OAuth2Client.m
+END

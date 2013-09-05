@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ServiceProvider</key>
+	<string>FaceBook</string>
+	<key>ClientID</key>
+	<string>175384205951500</string>
+	<key>ClientSecret</key>
+	<string>60b5be3b6f04f12f4f41e9909a865530</string>
+	<key>RedirectURL</key>
+	<string>http://www.NexTip .com/</string>
+	<key>UserURL</key>
+	<string>https://graph.facebook.com/oauth/authorize</string>
+	<key>TokenURL</key>
+	<string>https://graph.facebook.com/oauth/access_token</string>
+	<key>AccessTokenAdditionalParams</key>
+	<dict>
+		<key>type</key>
+		<string>web_server</string>
+	</dict>
+	<key>ExchangeAccessTokenAdditionalParams - 2</key>
+	<dict>
+		<key>type</key>
+		<string>web_server</string>
+		<key>grant_type</key>
+		<string>authorization_code</string>
+	</dict>
+	<key>RefreshTokenAdditionalParams</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>New item - 2</key>
+		<string></string>
+		<key>New item - 4</key>
+		<string></string>
+		<key>New item - 3</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

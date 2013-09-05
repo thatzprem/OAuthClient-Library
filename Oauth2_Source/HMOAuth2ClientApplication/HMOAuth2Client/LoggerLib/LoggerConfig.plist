@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultLogLevel</key>
+	<integer>1</integer>
+	<key>LogStorageSpecifier</key>
+	<string>Socket</string>
+	<key>LogDecoratorEnableFlag</key>
+	<false/>
+	<key>LogFileName</key>
+	<string>LogFile.txt</string>
+	<key>FileRollOverTime</key>
+	<integer>1</integer>
+	<key>FileMaxSize</key>
+	<integer>100</integer>
+	<key>ServerURL</key>
+	<string>http://10.16.22.53:8080/</string>
+	<key>ServerIP</key>
+	<string>localhost</string>
+	<key>ServerPort</key>
+	<integer>5060</integer>
+</dict>
+</plist>

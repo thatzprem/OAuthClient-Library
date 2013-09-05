@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/its_mobility-applications/!svn/ver/980/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/LoggerLib
+END
+LoggerConfig.plist
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/its_mobility-applications/!svn/ver/968/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/LoggerLib/LoggerConfig.plist
+END
+libHMLoggerDebug.a
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/its_mobility-applications/!svn/ver/972/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/LoggerLib/libHMLoggerDebug.a
+END
+libHMLoggerRelease.a
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/its_mobility-applications/!svn/ver/972/Components/iOS/OAuth/1.0/src/HMOAuth2ClientApplication/HMOAuth2Client/LoggerLib/libHMLoggerRelease.a
+END

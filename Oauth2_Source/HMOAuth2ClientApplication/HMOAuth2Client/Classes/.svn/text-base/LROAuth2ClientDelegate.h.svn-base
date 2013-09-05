@@ -1,0 +1,26 @@
+//
+//  OAuth2ClientDelegate.h
+//  OAuth2Client
+//
+/**
+ Created by Prem on 12/03/13.
+ Copyright (c) 2013 Happiest Minds Technologies Pvt Ltd.
+ This program is not to be copied or distributed without the express written consent of Happiest Minds. All rights reserved.
+ */
+
+#import <UIKit/UIKit.h>
+
+@class OAuth2Client;
+
+@protocol OAuth2ClientDelegate <UIWebViewDelegate>
+
+@required
+- (void)oauthClientDidReceiveAccessToken:(OAuth2Client *)client;
+
+@optional
+- (void)oauthClientDidReceiveAccessCode:(OAuth2Client *)client;
+- (void)oauthClientDidCancel:(OAuth2Client *)client;
+- (void)oauthClientDidRefreshAccessToken:(OAuth2Client *)client;
+
+
+@end
