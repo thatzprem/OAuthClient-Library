@@ -206,6 +206,7 @@
 				3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */,
 			);
 			name = ConnectorConfigFiles;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3B5C39F717DEE2C300FA6D0F /* AppDelegate */ = {
@@ -220,20 +221,20 @@
 		3B5C39F817DEE2D500FA6D0F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3B5C39F917DEE30900FA6D0F /* HomeTableViewController */,
+				3B5C39F917DEE30900FA6D0F /* HomeViewController */,
 				3B5C39FB17DEE91400FA6D0F /* DetailsViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		3B5C39F917DEE30900FA6D0F /* HomeTableViewController */ = {
+		3B5C39F917DEE30900FA6D0F /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3B29FC2817495E540000F82D /* HomeTableViewController.h */,
 				3B29FC2917495E540000F82D /* HomeTableViewController.m */,
 				3B29FC2A17495E550000F82D /* HomeTableViewController.xib */,
 			);
-			name = HomeTableViewController;
+			name = HomeViewController;
 			sourceTree = "<group>";
 		};
 		3B5C39FB17DEE91400FA6D0F /* DetailsViewController */ = {
@@ -247,14 +248,14 @@
 			name = DetailsViewController;
 			sourceTree = "<group>";
 		};
-		3B5C39FC17DEE92F00FA6D0F /* Utils */ = {
+		3B5C39FC17DEE92F00FA6D0F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				3B149A13172D06110021B797 /* OAuthConstants.h */,
 				3B5C3A0117DF40E700FA6D0F /* PlistHelper */,
 				3B7FA5421720043500D71469 /* Catagories */,
 			);
-			name = Utils;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		3B5C3A0117DF40E700FA6D0F /* PlistHelper */ = {
@@ -270,9 +271,8 @@
 		3B7FA4F2172000A100D71469 = {
 			isa = PBXGroup;
 			children = (
-				3B5C39F617DEE28900FA6D0F /* ConnectorConfigFiles */,
-				3B7FA504172000A100D71469 /* HMOAuth2ClientApplication */,
-				3B7FA52A172000BA00D71469 /* HMOAuth2Client */,
+				3B7FA504172000A100D71469 /* OAuth2ClientTestApplication */,
+				3B7FA52A172000BA00D71469 /* OAuth2ClientLibrary */,
 				3B7FA4FD172000A100D71469 /* Frameworks */,
 				3B7FA4FC172000A100D71469 /* Products */,
 			);
@@ -297,13 +297,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B7FA504172000A100D71469 /* HMOAuth2ClientApplication */ = {
+		3B7FA504172000A100D71469 /* OAuth2ClientTestApplication */ = {
 			isa = PBXGroup;
 			children = (
+				3B5C39F617DEE28900FA6D0F /* ConnectorConfigFiles */,
 				3B5C39F717DEE2C300FA6D0F /* AppDelegate */,
 				3B5C39F817DEE2D500FA6D0F /* ViewControllers */,
 				3B7FA505172000A100D71469 /* Supporting Files */,
 			);
+			name = OAuth2ClientTestApplication;
 			path = HMOAuth2ClientApplication;
 			sourceTree = "<group>";
 		};
@@ -321,13 +323,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B7FA52A172000BA00D71469 /* HMOAuth2Client */ = {
+		3B7FA52A172000BA00D71469 /* OAuth2ClientLibrary */ = {
 			isa = PBXGroup;
 			children = (
 				3B7FA534172003F900D71469 /* Classes */,
-				3B5C39FC17DEE92F00FA6D0F /* Utils */,
+				3B5C39FC17DEE92F00FA6D0F /* Utilities */,
 				3B7FA52B172000BA00D71469 /* Supporting Files */,
 			);
+			name = OAuth2ClientLibrary;
 			path = HMOAuth2Client;
 			sourceTree = "<group>";
 		};
