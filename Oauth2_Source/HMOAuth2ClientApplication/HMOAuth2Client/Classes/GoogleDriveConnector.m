@@ -43,7 +43,6 @@
     self = [super init];
     if (self) {
         
-        
         oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"GoogleDriveOAuth2ClientConfig"];
         oAuthClient.delegate = self;
         
@@ -62,8 +61,8 @@
     resourcePath = [self getResourcePathForAPI:api];
     
     if (!accessTokenString) {
-//        [[HMLogManager getSharedInstance] error:@"Access Token is nil..."];
-        
+
+        NSLog(@"Access token is nil...");
         return nil;
     }
     

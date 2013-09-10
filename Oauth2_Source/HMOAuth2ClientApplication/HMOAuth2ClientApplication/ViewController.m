@@ -25,11 +25,7 @@
     GoogleDriveConnector *googleDriveConnector;
     PicasaConnector *picasaConnector;
     SkyDriveConnector *skyDriveConnector;
-
-    
     UIAlertView* alertView;
-    
-    
 }
 
 @end

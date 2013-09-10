@@ -16,6 +16,7 @@
 #import "OAuth2AccessToken.h"
 #import "PlistHelper.h"
 #import "HMOAuthConstants.h"
+#import "NSDate+NSDateUtility.h"
 
 #pragma mark -
 //#define Test Test
@@ -86,7 +87,6 @@
     if (self = [super init]) {
         
         self.oAuthConfigDictionary = [[NSDictionary alloc] initWithDictionary:[self getConfigurationPlistData:confFileName] copyItems:YES];
-        NSLog(@"OAuth configuration dictionary details: %@",self.oAuthConfigDictionary);
     
         [self setClassPropertiesWithDictionaryValues]; //Set the class properties with Dictionary values.
         [self initOtherClassProperties]; //Set other class properties.
@@ -145,8 +145,6 @@
     
     NSLog(@"Setting class properties with dictionary values...");
     
-    NSLog(@"Configuration dictionary values:%@",self.oAuthConfigDictionary);
-            
     clientID        =   [self.oAuthConfigDictionary valueForKey:@"ClientID"];
     clientSecret    =   [self.oAuthConfigDictionary valueForKey:@"ClientSecret"];
     redirectURL     =   [NSURL URLWithString:[self.oAuthConfigDictionary valueForKey:@"RedirectURL"]];
@@ -154,7 +152,6 @@
     userURL         =   [NSURL URLWithString:[self.oAuthConfigDictionary valueForKey:@"UserURL"]];
     tokenURL        =   [NSURL URLWithString:[self.oAuthConfigDictionary valueForKey:@"TokenURL"]];;
     
-    NSLog(@"Class property values after assigning from the dictionary");
     NSLog(@"ClientID:%@",self.clientID);
     NSLog(@"ClientSecret:%@",self.clientSecret);
     NSLog(@"RedirectURL:%@",self.redirectURL);
@@ -189,17 +186,14 @@
     }
   }
     
-    NSLog(@"accessCodeAdditionalParamsDictionary details: %@",accessCodeAdditionalParamsDictionary);
     NSLog(@"AccessCodeParams formed= %@",accessCodeParams);
     
   NSURL *fullURL = [NSURL URLWithString:[[self.userURL absoluteString] stringByAppendingFormat:@"?%@", [accessCodeParams stringWithFormEncodedComponents]]];
   NSMutableURLRequest *authRequest = [NSMutableURLRequest requestWithURL:fullURL];
   [authRequest setHTTPMethod:@"GET"];
     
-    NSLog(@"AccessCode request full URL = %@",fullURL);
-    NSLog(@"AccessCode request = %@",authRequest);
-    
-    
+    NSLog(@"AccessCode request URL = %@",fullURL);
+//    NSLog(@"AccessCode request = %@",authRequest);
     
   return [authRequest copy];
 }
@@ -254,8 +248,6 @@
     }];
       
     [_networkQueue addOperation:operation];
-      
-      
       
   }
 }
@@ -521,16 +513,12 @@
 
 - (void)authorizeUsingWebView:(UIWebView *)webView errorObject:(NSError **)error;
 {
-    
-
     [self applicationDelegateSetCheck:error]; // First check if the application delegate is set?
     
     if ([self webViewEmptyOrNilCheck:webView errorObject:error]) { //Check if a empty/nil web view is received?
         
         [self authorizeUsingWebView:webView additionalParameters:[self.oAuthConfigDictionary valueForKey:@"AccessTokenAdditionalParams"]]; // Calling other method with additional params details.
     }
-        
-    
 }
 
 #pragma mark WebView Validation Methods
@@ -554,8 +542,8 @@
         }
     }
     else{
-        NSLog(@"Didn't receive any webview reference...");
-        *error = [NSError errorWithDomain:@"Webview object found Invalid or unavilable for access!" code:201 userInfo:nil];
+        NSLog(@"The webview passed is nil.");
+        *error = [NSError errorWithDomain:@"The webview passed is nil.!" code:201 userInfo:nil];
 
         return NO;
     }
@@ -569,26 +557,15 @@
     }
     else{
         
-        NSLog(@"Application delegate is not set");
-        
         NSLog(@"Applcation is not set... Returning with exception...");
-        
-        *error = [NSError errorWithDomain:@"Application delegate not set!" code:202 userInfo:nil];
-
+        *error = [NSError errorWithDomain:@"Application delegate is not set!" code:202 userInfo:nil];
     }
-    
 }
 
 - (void)authorizeUsingWebView:(UIWebView *)webView additionalParameters:(NSDictionary *)additionalParameters;
 {
-    
-    NSLog(@"%@",[self getAccessCodeRequest]);
     [webView loadRequest:[self getAccessCodeRequest]]; //Requesting access code request.
-    NSLog(@"Requesting for Access token");
-    
-    
-    
-
+    NSLog(@"Request initiated for Access token...");
 }
 
 #pragma mark WebView Delegate Methods
@@ -597,13 +574,8 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 {
     
-    
-    NSLog(@"WebView Delegate: shouldStartLoadWithRequest....");
-    
-
-    NSLog(@"%@,%@",[self.redirectURL absoluteString],request.URL);
+    NSLog(@"WebView Delegate: shouldStartLoadWithRequestURL: %@",request.URL);
   if ([[request.URL absoluteString] hasPrefix:[self.redirectURL absoluteString]]) {
-
       
       NSLog(@"Web view request URL has redirect URL prefix...");
       [self extractAccessCodeFromCallbackURL:request.URL];
@@ -659,7 +631,6 @@
 {
     
     NSLog(@"WebView Delegate: webViewDidStartLoad....");
-
   if ([self.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
     [self.delegate webViewDidStartLoad:webView];
   }

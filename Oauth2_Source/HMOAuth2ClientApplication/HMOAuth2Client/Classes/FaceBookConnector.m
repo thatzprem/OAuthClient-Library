@@ -38,7 +38,9 @@
         NSError *error;
         [oAuthClient authorizeUsingWebView:webView errorObject:&error];
         
-        NSLog(@"ERROR: %@",error);
+        if (!error) {
+            NSLog(@"ERROR: %@",error);
+        }
     }
     return self;
 }
