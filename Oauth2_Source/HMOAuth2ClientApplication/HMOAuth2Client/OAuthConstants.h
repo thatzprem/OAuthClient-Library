@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 NexTip . All rights reserved.
 //
 
-#ifndef HMOAuth2ClientApplication_HMOAuthConstants_h
-#define HMOAuth2ClientApplication_HMOAuthConstants_h
+#ifndef OAuth2ClientApplication_OAuthConstants_h
+#define OAuth2ClientApplication_OAuthConstants_h
 
 #import "NSDate+NSDateUtility.h"
 

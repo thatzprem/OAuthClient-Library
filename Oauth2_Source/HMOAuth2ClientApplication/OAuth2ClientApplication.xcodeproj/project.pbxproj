@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B149A14172D06110021B797 /* HMOAuthConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B149A13172D06110021B797 /* HMOAuthConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B149A14172D06110021B797 /* OAuthConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B149A13172D06110021B797 /* OAuthConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B29FC2B17495E550000F82D /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B29FC2917495E540000F82D /* HomeTableViewController.m */; };
 		3B29FC2C17495E550000F82D /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29FC2A17495E550000F82D /* HomeTableViewController.xib */; };
 		3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */; };
 		3B502A86172143A30036CEED /* OAuth2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA537172003F900D71469 /* OAuth2Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B5362A3172F9A520054D967 /* PlistHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5362A1172F9A520054D967 /* PlistHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B5362A4172F9A520054D967 /* PlistHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5362A2172F9A520054D967 /* PlistHelper.m */; };
 		3B5C39FF17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5C39FD17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h */; };
 		3B5C3A0017DF1C3F00FA6D0F /* NSDate+NSDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C39FE17DF1C3F00FA6D0F /* NSDate+NSDateUtility.m */; };
+		3B5C3A0417DF40E800FA6D0F /* PlistHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */; };
+		3B5C3A0517DF40E800FA6D0F /* PlistHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C3A0317DF40E800FA6D0F /* PlistHelper.m */; };
 		3B7FA4FF172000A100D71469 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA4FE172000A100D71469 /* UIKit.framework */; };
 		3B7FA501172000A100D71469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA500172000A100D71469 /* Foundation.framework */; };
 		3B7FA503172000A100D71469 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA502172000A100D71469 /* CoreGraphics.framework */; };
@@ -76,15 +76,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B149A13172D06110021B797 /* HMOAuthConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMOAuthConstants.h; sourceTree = "<group>"; };
+		3B149A13172D06110021B797 /* OAuthConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConstants.h; sourceTree = "<group>"; };
 		3B29FC2817495E540000F82D /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = HomeTableViewController/HomeTableViewController.h; sourceTree = "<group>"; };
 		3B29FC2917495E540000F82D /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = HomeTableViewController/HomeTableViewController.m; sourceTree = "<group>"; };
 		3B29FC2A17495E550000F82D /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableViewController.xib; path = HomeTableViewController/HomeTableViewController.xib; sourceTree = "<group>"; };
 		3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LoggerConfig.plist; path = HMOAuth2Client/LoggerLib/LoggerConfig.plist; sourceTree = "<group>"; };
-		3B5362A1172F9A520054D967 /* PlistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistHelper.h; sourceTree = "<group>"; };
-		3B5362A2172F9A520054D967 /* PlistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistHelper.m; sourceTree = "<group>"; };
 		3B5C39FD17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDateUtility.h"; sourceTree = "<group>"; };
 		3B5C39FE17DF1C3F00FA6D0F /* NSDate+NSDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDateUtility.m"; sourceTree = "<group>"; };
+		3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistHelper.h; sourceTree = "<group>"; };
+		3B5C3A0317DF40E800FA6D0F /* PlistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistHelper.m; sourceTree = "<group>"; };
 		3B7FA4FB172000A100D71469 /* OAuth2ClientApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuth2ClientApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7FA4FE172000A100D71469 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B7FA500172000A100D71469 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,16 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B5362A0172F9A410054D967 /* HMPlistHelper */ = {
-			isa = PBXGroup;
-			children = (
-				3B5362A1172F9A520054D967 /* PlistHelper.h */,
-				3B5362A2172F9A520054D967 /* PlistHelper.m */,
-			);
-			name = HMPlistHelper;
-			path = Classes/Utils/HMPlistHelper;
-			sourceTree = "<group>";
-		};
 		3B5C39F317DEE20400FA6D0F /* Connectors */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +179,7 @@
 			path = Connectors;
 			sourceTree = "<group>";
 		};
-		3B5C39F417DEE24000FA6D0F /* OAuthSources */ = {
+		3B5C39F417DEE24000FA6D0F /* OAuthSource */ = {
 			isa = PBXGroup;
 			children = (
 				3B7FA535172003F900D71469 /* OAuth2AccessToken.h */,
@@ -200,6 +190,7 @@
 				3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */,
 				3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */,
 			);
+			name = OAuthSource;
 			path = OAuthSources;
 			sourceTree = "<group>";
 		};
@@ -259,11 +250,21 @@
 		3B5C39FC17DEE92F00FA6D0F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3B149A13172D06110021B797 /* HMOAuthConstants.h */,
-				3B5362A0172F9A410054D967 /* HMPlistHelper */,
+				3B149A13172D06110021B797 /* OAuthConstants.h */,
+				3B5C3A0117DF40E700FA6D0F /* PlistHelper */,
 				3B7FA5421720043500D71469 /* Catagories */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		3B5C3A0117DF40E700FA6D0F /* PlistHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */,
+				3B5C3A0317DF40E800FA6D0F /* PlistHelper.m */,
+			);
+			name = PlistHelper;
+			path = Classes/Utils/PlistHelper;
 			sourceTree = "<group>";
 		};
 		3B7FA4F2172000A100D71469 = {
@@ -341,7 +342,7 @@
 		3B7FA534172003F900D71469 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3B5C39F417DEE24000FA6D0F /* OAuthSources */,
+				3B5C39F417DEE24000FA6D0F /* OAuthSource */,
 				3B5C39F317DEE20400FA6D0F /* Connectors */,
 			);
 			path = Classes;
@@ -370,8 +371,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B149A14172D06110021B797 /* HMOAuthConstants.h in Headers */,
-				3B5362A3172F9A520054D967 /* PlistHelper.h in Headers */,
+				3B149A14172D06110021B797 /* OAuthConstants.h in Headers */,
 				3B843FE61745141B005E21C1 /* FaceBookConnector.h in Headers */,
 				3BAC41AF177B784B00DE7BE9 /* PicasaConnector.h in Headers */,
 				3BD20AEF17D8619900C9C510 /* SkyDriveConnector.h in Headers */,
@@ -381,6 +381,7 @@
 				3B502A86172143A30036CEED /* OAuth2Client.h in Headers */,
 				3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */,
 				3B5C39FF17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h in Headers */,
+				3B5C3A0417DF40E800FA6D0F /* PlistHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +520,6 @@
 				3B7FA54A1720045900D71469 /* NSDictionary+QueryString.m in Sources */,
 				3B7FA54C1720045900D71469 /* NSString+QueryString.m in Sources */,
 				3B7FA54E1720045900D71469 /* NSURL+QueryInspector.m in Sources */,
-				3B5362A4172F9A520054D967 /* PlistHelper.m in Sources */,
 				3B843FE71745141B005E21C1 /* FaceBookConnector.m in Sources */,
 				3B843FE91745141B005E21C1 /* InstagramConnector.m in Sources */,
 				3BC93FB117469E5500746C4D /* GoogleConnector.m in Sources */,
@@ -527,6 +527,7 @@
 				3BAC41B0177B784B00DE7BE9 /* PicasaConnector.m in Sources */,
 				3BD20AF017D8619900C9C510 /* SkyDriveConnector.m in Sources */,
 				3B5C3A0017DF1C3F00FA6D0F /* NSDate+NSDateUtility.m in Sources */,
+				3B5C3A0517DF40E800FA6D0F /* PlistHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

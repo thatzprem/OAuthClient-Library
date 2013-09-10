@@ -15,7 +15,7 @@
 #import "NSDictionary+QueryString.h"
 #import "OAuth2AccessToken.h"
 #import "PlistHelper.h"
-#import "HMOAuthConstants.h"
+#import "OAuthConstants.h"
 #import "NSDate+NSDateUtility.h"
 
 #pragma mark -
