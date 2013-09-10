@@ -10,8 +10,6 @@
 		3B149A14172D06110021B797 /* HMOAuthConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B149A13172D06110021B797 /* HMOAuthConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B29FC2B17495E550000F82D /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B29FC2917495E540000F82D /* HomeTableViewController.m */; };
 		3B29FC2C17495E550000F82D /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29FC2A17495E550000F82D /* HomeTableViewController.xib */; };
-		3B29FC30174960E60000F82D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B29FC2E174960E60000F82D /* DetailViewController.m */; };
-		3B29FC31174960E60000F82D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29FC2F174960E60000F82D /* DetailViewController.xib */; };
 		3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */; };
 		3B502A86172143A30036CEED /* OAuth2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA537172003F900D71469 /* OAuth2Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,9 +78,6 @@
 		3B29FC2817495E540000F82D /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = HomeTableViewController/HomeTableViewController.h; sourceTree = "<group>"; };
 		3B29FC2917495E540000F82D /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = HomeTableViewController/HomeTableViewController.m; sourceTree = "<group>"; };
 		3B29FC2A17495E550000F82D /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableViewController.xib; path = HomeTableViewController/HomeTableViewController.xib; sourceTree = "<group>"; };
-		3B29FC2D174960E50000F82D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = DetailViewController/DetailViewController.h; sourceTree = "<group>"; };
-		3B29FC2E174960E60000F82D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = DetailViewController/DetailViewController.m; sourceTree = "<group>"; };
-		3B29FC2F174960E60000F82D /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = DetailViewController/DetailViewController.xib; sourceTree = "<group>"; };
 		3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LoggerConfig.plist; path = HMOAuth2Client/LoggerLib/LoggerConfig.plist; sourceTree = "<group>"; };
 		3B5362A1172F9A520054D967 /* PlistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistHelper.h; sourceTree = "<group>"; };
 		3B5362A2172F9A520054D967 /* PlistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistHelper.m; sourceTree = "<group>"; };
@@ -105,36 +100,36 @@
 		3B7FA51D172000A100D71469 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHMOAuth2Client.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7FA52C172000BA00D71469 /* HMOAuth2Client-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMOAuth2Client-Prefix.pch"; sourceTree = "<group>"; };
-		3B7FA535172003F900D71469 /* OAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2AccessToken.h; sourceTree = "<group>"; };
-		3B7FA536172003F900D71469 /* OAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2AccessToken.m; sourceTree = "<group>"; };
-		3B7FA537172003F900D71469 /* OAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2Client.h; sourceTree = "<group>"; };
-		3B7FA538172003F900D71469 /* OAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OAuth2Client.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2ClientDelegate.h; sourceTree = "<group>"; };
-		3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2ClientURLRequestOperation.h; sourceTree = "<group>"; };
-		3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2ClientURLRequestOperation.m; sourceTree = "<group>"; };
+		3B7FA535172003F900D71469 /* OAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2AccessToken.h; path = ../OAuth2AccessToken.h; sourceTree = "<group>"; };
+		3B7FA536172003F900D71469 /* OAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth2AccessToken.m; path = ../OAuth2AccessToken.m; sourceTree = "<group>"; };
+		3B7FA537172003F900D71469 /* OAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2Client.h; path = ../OAuth2Client.h; sourceTree = "<group>"; };
+		3B7FA538172003F900D71469 /* OAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OAuth2Client.m; path = ../OAuth2Client.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LROAuth2ClientDelegate.h; path = ../LROAuth2ClientDelegate.h; sourceTree = "<group>"; };
+		3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2ClientURLRequestOperation.h; path = ../OAuth2ClientURLRequestOperation.h; sourceTree = "<group>"; };
+		3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth2ClientURLRequestOperation.m; path = ../OAuth2ClientURLRequestOperation.m; sourceTree = "<group>"; };
 		3B7FA5431720045900D71469 /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
 		3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
 		3B7FA5451720045900D71469 /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
 		3B7FA5461720045900D71469 /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
 		3B7FA5471720045900D71469 /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
 		3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
-		3B843FE21745141B005E21C1 /* FaceBookConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookConnector.h; sourceTree = "<group>"; };
-		3B843FE31745141B005E21C1 /* FaceBookConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FaceBookConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		3B843FE41745141B005E21C1 /* InstagramConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramConnector.h; sourceTree = "<group>"; };
-		3B843FE51745141B005E21C1 /* InstagramConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = InstagramConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3B843FE21745141B005E21C1 /* FaceBookConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceBookConnector.h; path = ../FaceBookConnector.h; sourceTree = "<group>"; };
+		3B843FE31745141B005E21C1 /* FaceBookConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = FaceBookConnector.m; path = ../FaceBookConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3B843FE41745141B005E21C1 /* InstagramConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramConnector.h; path = ../InstagramConnector.h; sourceTree = "<group>"; };
+		3B843FE51745141B005E21C1 /* InstagramConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InstagramConnector.m; path = ../InstagramConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B843FEA17451557005E21C1 /* InstagramOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InstagramOAuth2ClientConfig.plist; sourceTree = "<group>"; };
 		3B843FEE17451865005E21C1 /* FacebookOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FacebookOAuth2ClientConfig.plist; sourceTree = "<group>"; };
-		3B918D01177A056300E9F66B /* GoogleDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDriveConnector.h; sourceTree = "<group>"; };
-		3B918D02177A056300E9F66B /* GoogleDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDriveConnector.m; sourceTree = "<group>"; };
+		3B918D01177A056300E9F66B /* GoogleDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleDriveConnector.h; path = ../GoogleDriveConnector.h; sourceTree = "<group>"; };
+		3B918D02177A056300E9F66B /* GoogleDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleDriveConnector.m; path = ../GoogleDriveConnector.m; sourceTree = "<group>"; };
 		3B918D05177A05F700E9F66B /* GoogleDriveOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleDriveOAuth2ClientConfig.plist; sourceTree = "<group>"; };
 		3BAC41AB177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PicasaOAuth2ClientConfig.plist; sourceTree = "<group>"; };
-		3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicasaConnector.h; sourceTree = "<group>"; };
-		3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicasaConnector.m; sourceTree = "<group>"; };
-		3BC93FAE17469E5500746C4D /* GoogleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleConnector.h; sourceTree = "<group>"; };
-		3BC93FAF17469E5500746C4D /* GoogleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GoogleConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PicasaConnector.h; path = ../PicasaConnector.h; sourceTree = "<group>"; };
+		3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PicasaConnector.m; path = ../PicasaConnector.m; sourceTree = "<group>"; };
+		3BC93FAE17469E5500746C4D /* GoogleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleConnector.h; path = ../GoogleConnector.h; sourceTree = "<group>"; };
+		3BC93FAF17469E5500746C4D /* GoogleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GoogleConnector.m; path = ../GoogleConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3BC93FB217469F9400746C4D /* GoogleOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleOAuth2ClientConfig.plist; sourceTree = "<group>"; };
-		3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyDriveConnector.h; sourceTree = "<group>"; };
-		3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyDriveConnector.m; sourceTree = "<group>"; };
+		3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkyDriveConnector.h; path = ../SkyDriveConnector.h; sourceTree = "<group>"; };
+		3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkyDriveConnector.m; path = ../SkyDriveConnector.m; sourceTree = "<group>"; };
 		3BD20AF117D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkyDriveOAuth2ClientConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +166,40 @@
 			path = Classes/Utils/HMPlistHelper;
 			sourceTree = "<group>";
 		};
-		3B7FA4F2172000A100D71469 = {
+		3B5C39F317DEE20400FA6D0F /* Connectors */ = {
+			isa = PBXGroup;
+			children = (
+				3B918D01177A056300E9F66B /* GoogleDriveConnector.h */,
+				3B918D02177A056300E9F66B /* GoogleDriveConnector.m */,
+				3B843FE21745141B005E21C1 /* FaceBookConnector.h */,
+				3B843FE31745141B005E21C1 /* FaceBookConnector.m */,
+				3B843FE41745141B005E21C1 /* InstagramConnector.h */,
+				3B843FE51745141B005E21C1 /* InstagramConnector.m */,
+				3BC93FAE17469E5500746C4D /* GoogleConnector.h */,
+				3BC93FAF17469E5500746C4D /* GoogleConnector.m */,
+				3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */,
+				3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */,
+				3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */,
+				3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */,
+			);
+			path = Connectors;
+			sourceTree = "<group>";
+		};
+		3B5C39F417DEE24000FA6D0F /* OAuthSources */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA535172003F900D71469 /* OAuth2AccessToken.h */,
+				3B7FA536172003F900D71469 /* OAuth2AccessToken.m */,
+				3B7FA537172003F900D71469 /* OAuth2Client.h */,
+				3B7FA538172003F900D71469 /* OAuth2Client.m */,
+				3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */,
+				3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */,
+				3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */,
+			);
+			path = OAuthSources;
+			sourceTree = "<group>";
+		};
+		3B5C39F617DEE28900FA6D0F /* ConnectorConfigFiles */ = {
 			isa = PBXGroup;
 			children = (
 				3B843FEE17451865005E21C1 /* FacebookOAuth2ClientConfig.plist */,
@@ -181,6 +209,63 @@
 				3BAC41AB177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist */,
 				3BD20AF117D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist */,
 				3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */,
+			);
+			name = ConnectorConfigFiles;
+			sourceTree = "<group>";
+		};
+		3B5C39F717DEE2C300FA6D0F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA50D172000A100D71469 /* AppDelegate.h */,
+				3B7FA50E172000A100D71469 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3B5C39F817DEE2D500FA6D0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B5C39F917DEE30900FA6D0F /* HomeTableViewController */,
+				3B5C39FB17DEE91400FA6D0F /* DetailsViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3B5C39F917DEE30900FA6D0F /* HomeTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B29FC2817495E540000F82D /* HomeTableViewController.h */,
+				3B29FC2917495E540000F82D /* HomeTableViewController.m */,
+				3B29FC2A17495E550000F82D /* HomeTableViewController.xib */,
+			);
+			name = HomeTableViewController;
+			sourceTree = "<group>";
+		};
+		3B5C39FB17DEE91400FA6D0F /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA516172000A100D71469 /* ViewController.h */,
+				3B7FA517172000A100D71469 /* ViewController.m */,
+				3B7FA519172000A100D71469 /* ViewController.xib */,
+				3B7FA51C172000A100D71469 /* ViewController_iPad.xib */,
+			);
+			name = DetailsViewController;
+			sourceTree = "<group>";
+		};
+		3B5C39FC17DEE92F00FA6D0F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B149A13172D06110021B797 /* HMOAuthConstants.h */,
+				3B5362A0172F9A410054D967 /* HMPlistHelper */,
+				3B7FA5421720043500D71469 /* Catagories */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3B7FA4F2172000A100D71469 = {
+			isa = PBXGroup;
+			children = (
+				3B5C39F617DEE28900FA6D0F /* ConnectorConfigFiles */,
 				3B7FA504172000A100D71469 /* HMOAuth2ClientApplication */,
 				3B7FA52A172000BA00D71469 /* HMOAuth2Client */,
 				3B7FA4FD172000A100D71469 /* Frameworks */,
@@ -210,19 +295,9 @@
 		3B7FA504172000A100D71469 /* HMOAuth2ClientApplication */ = {
 			isa = PBXGroup;
 			children = (
-				3B7FA50D172000A100D71469 /* AppDelegate.h */,
-				3B7FA50E172000A100D71469 /* AppDelegate.m */,
-				3B7FA516172000A100D71469 /* ViewController.h */,
-				3B7FA517172000A100D71469 /* ViewController.m */,
-				3B7FA519172000A100D71469 /* ViewController.xib */,
-				3B7FA51C172000A100D71469 /* ViewController_iPad.xib */,
+				3B5C39F717DEE2C300FA6D0F /* AppDelegate */,
+				3B5C39F817DEE2D500FA6D0F /* ViewControllers */,
 				3B7FA505172000A100D71469 /* Supporting Files */,
-				3B29FC2817495E540000F82D /* HomeTableViewController.h */,
-				3B29FC2917495E540000F82D /* HomeTableViewController.m */,
-				3B29FC2A17495E550000F82D /* HomeTableViewController.xib */,
-				3B29FC2D174960E50000F82D /* DetailViewController.h */,
-				3B29FC2E174960E60000F82D /* DetailViewController.m */,
-				3B29FC2F174960E60000F82D /* DetailViewController.xib */,
 			);
 			path = HMOAuth2ClientApplication;
 			sourceTree = "<group>";
@@ -245,10 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				3B7FA534172003F900D71469 /* Classes */,
-				3B5362A0172F9A410054D967 /* HMPlistHelper */,
-				3B7FA5421720043500D71469 /* Catagories */,
+				3B5C39FC17DEE92F00FA6D0F /* Utils */,
 				3B7FA52B172000BA00D71469 /* Supporting Files */,
-				3B149A13172D06110021B797 /* HMOAuthConstants.h */,
 			);
 			path = HMOAuth2Client;
 			sourceTree = "<group>";
@@ -264,25 +337,8 @@
 		3B7FA534172003F900D71469 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */,
-				3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */,
-				3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */,
-				3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */,
-				3B918D01177A056300E9F66B /* GoogleDriveConnector.h */,
-				3B918D02177A056300E9F66B /* GoogleDriveConnector.m */,
-				3B843FE21745141B005E21C1 /* FaceBookConnector.h */,
-				3B843FE31745141B005E21C1 /* FaceBookConnector.m */,
-				3B843FE41745141B005E21C1 /* InstagramConnector.h */,
-				3B843FE51745141B005E21C1 /* InstagramConnector.m */,
-				3BC93FAE17469E5500746C4D /* GoogleConnector.h */,
-				3BC93FAF17469E5500746C4D /* GoogleConnector.m */,
-				3B7FA535172003F900D71469 /* OAuth2AccessToken.h */,
-				3B7FA536172003F900D71469 /* OAuth2AccessToken.m */,
-				3B7FA537172003F900D71469 /* OAuth2Client.h */,
-				3B7FA538172003F900D71469 /* OAuth2Client.m */,
-				3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */,
-				3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */,
-				3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */,
+				3B5C39F417DEE24000FA6D0F /* OAuthSources */,
+				3B5C39F317DEE20400FA6D0F /* Connectors */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -404,7 +460,6 @@
 				3B843FEF17451865005E21C1 /* FacebookOAuth2ClientConfig.plist in Resources */,
 				3BC93FB317469F9400746C4D /* GoogleOAuth2ClientConfig.plist in Resources */,
 				3B29FC2C17495E550000F82D /* HomeTableViewController.xib in Resources */,
-				3B29FC31174960E60000F82D /* DetailViewController.xib in Resources */,
 				3B918D06177A05F700E9F66B /* GoogleDriveOAuth2ClientConfig.plist in Resources */,
 				3BAC41AC177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist in Resources */,
 				3BD20AF217D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist in Resources */,
@@ -444,7 +499,6 @@
 				3B7FA54B1720045900D71469 /* NSString+QueryString.m in Sources */,
 				3B7FA54D1720045900D71469 /* NSURL+QueryInspector.m in Sources */,
 				3B29FC2B17495E550000F82D /* HomeTableViewController.m in Sources */,
-				3B29FC30174960E60000F82D /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

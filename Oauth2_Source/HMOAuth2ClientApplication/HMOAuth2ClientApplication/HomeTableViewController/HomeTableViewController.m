@@ -8,7 +8,6 @@
 
 #import "HomeTableViewController.h"
 #import "ViewController.h"
-#import "DetailViewController.h"
 #import "AppDelegate.h"
 
 @interface HomeTableViewController ()
