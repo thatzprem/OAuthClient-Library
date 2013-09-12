@@ -1,35 +1,30 @@
 //
-//  InstagramConnector.m
-//  OAuth2ClientApplication
+//  SocialConnectorFaceBookHandler.m
+//  SocialConnector
 //
-//  Created by Prem kumar on 15/05/13.
+//  Created by Testing on 25/04/13.
 //  Copyright (c) 2013 NexTip . All rights reserved.
 //
 
-#import "InstagramConnector.h"
+#import "FaceBookConnector.h"
 #import "OAuth2Client.h"
-#import "LROAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
 #import "NSDictionary+QueryString.h"
 
 
-#define kHostName @"https://api.instagram.com"
-#define kUserIndicator @"v1"
-#define kFriendsList @"users/self/followed-by"
+#define kHostName @"https://graph.facebook.com"
+#define kUserIndicator @"me"
 
-#define kPhotosList @"users/self/media/recent"
-@interface InstagramConnector()<OAuth2ClientDelegate>{
-    
-    OAuth2Client *oAuthClient;
-    NSString *resourcePath;
-    NSString *accessTokenString;
+@interface FaceBookConnector()<OAuth2ClientDelegate>{
 
+        OAuth2Client *oAuthClient;
+        NSString *resourcePath;
+        NSString *accessTokenString;
 }
 
 @end
 
-@implementation InstagramConnector
-
-
+@implementation FaceBookConnector
 
 - (id)initWithAuthorizingWebView:(UIWebView*)webView
 {
@@ -37,21 +32,20 @@
     if (self) {
         
         
-        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"InstagramOAuth2ClientConfig"];
+        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"FacebookOAuth2ClientConfig"];
         oAuthClient.delegate = self;
         
         NSError *error;
         [oAuthClient authorizeUsingWebView:webView errorObject:&error];
         
-        NSLog(@"ERROR: %@",error);
+        if (!error) {
+            NSLog(@"ERROR: %@",error);
+        }
     }
     return self;
 }
-
-
-- (NSURL*)getDataForinstagramAPI:(INSTAGRAM_USER_API)api
+- (NSURL*)getDataForFaceBookAPI:(FACEBOOK_USER_API)api
 {
-    
     resourcePath = [self getResourcePathForAPI:api];
     
     if (!accessTokenString) {
@@ -73,8 +67,8 @@
     NSLog(@"API URL = %@",fullURL);
     
     return fullURL;
-
     
+
 }
 
 - (void)oauthClientDidReceiveAccessToken:(OAuth2AccessToken *)client{
@@ -82,8 +76,7 @@
     accessTokenString = [NSString stringWithFormat:@"%@",client];
     NSLog(@"access Token string = %@",accessTokenString);
     
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"instagramSuccessNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"facebookSuccessNotification" object:nil];
 
     
 }
@@ -95,22 +88,22 @@
 }
 
 
-- (NSString *)getResourcePathForAPI:(INSTAGRAM_USER_API)iApi {
+- (NSString *)getResourcePathForAPI:(FACEBOOK_USER_API)iApi {
 	NSMutableString *aString;
 	
 	switch (iApi) {
-            
+    
 			
-		case INSTAGRAM_USER_FRIENDS:
-			aString = [NSMutableString stringWithFormat:@"%@/%@", kUserIndicator, kFriendsList];
+		case FACEBOOK_USER_FRIENDS:
+			aString = [NSMutableString stringWithFormat:@"%@/%@", kUserIndicator, @"friends"];
 			break;
 			
-		case INSTAGRAM_USER_ABOUT:
-			aString = [NSMutableString stringWithFormat:@"%@/users/self", kUserIndicator];
+		case FACEBOOK_USER_ABOUT:
+			aString = [NSMutableString stringWithFormat:@"%@", kUserIndicator];
 			break;
 			
-		case INSTAGRAM_USER_PHOTOS:
-			aString = [NSMutableString stringWithFormat:@"%@/%@", kUserIndicator, kPhotosList];
+		case FACEBOOK_USER_PHOTOS:
+			aString = [NSMutableString stringWithFormat:@"%@/%@", kUserIndicator, @"photos"];
 			break;
 			
 		default:

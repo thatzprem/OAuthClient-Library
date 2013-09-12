@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 NexTip . All rights reserved.
 //
 
-#import "GoogleDriveConnector.h"
+#import "PicasaConnector.h"
 
 #import "OAuth2Client.h"
-#import "LROAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
 #import "NSDictionary+QueryString.h"
 
 
@@ -17,13 +17,13 @@
 
 
 
-#define kHostName @"https://www.googleapis.com/drive/v2"
+#define kHostName @"https://picasaweb.google.com/data/feed/api"
 //#define kAbout @""
 //#define kFriendsList @"users/self/followed-by"
 //#define kPhotosList @"users/self/media/recent"
 
 
-@interface GoogleDriveConnector()<OAuth2ClientDelegate>{
+@interface PicasaConnector()<OAuth2ClientDelegate>{
     
     OAuth2Client *oAuthClient;
     NSString *resourcePath;
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation GoogleDriveConnector
+@implementation PicasaConnector
 
 
 
@@ -43,7 +43,8 @@
     self = [super init];
     if (self) {
         
-        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"GoogleDriveOAuth2ClientConfig"];
+        
+        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"PicasaOAuth2ClientConfig"];
         oAuthClient.delegate = self;
         
         NSError *error;
@@ -55,14 +56,14 @@
 }
 
 
-- (NSURL*)getDataForGoogleDriveAPI:(GOOGLE_DRIVE_USER_API)api
+- (NSURL*)getDataForPicasaAPI:(PICASA_USER_API)api
 {
     
     resourcePath = [self getResourcePathForAPI:api];
     
     if (!accessTokenString) {
-
-        NSLog(@"Access token is nil...");
+//        [[HMLogManager getSharedInstance] error:@"Access Token is nil..."];
+        
         return nil;
     }
     
@@ -76,7 +77,7 @@
     
     NSURL *fullURL = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
-    NSLog(@"API URL = %@",fullURL);
+    NSLog(@"API URL = %@",url);
     
     return fullURL;
     
@@ -117,7 +118,7 @@
     
     NSLog(@"googleUserID: %@", googleUserID);
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"googleDriveSuccessNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"picasaSuccessNotification" object:nil];
 
         
     
@@ -130,21 +131,23 @@
 }
 
 
-- (NSString *)getResourcePathForAPI:(GOOGLE_DRIVE_USER_API)iApi {
+- (NSString *)getResourcePathForAPI:(PICASA_USER_API)iApi {
 	NSMutableString *aString;
 	
 	switch (iApi) {
             
 			
-		case GOOGLE_DRIVE_USER_CHANGES:
-			aString = [NSMutableString stringWithString:@"changes"];
+		case PICASA_USER_CHANGES:
+            
+            //https://picasaweb.google.com/data/feed/api/user/113147664993405565981/albumid/5654736637546511265
+			aString = [NSMutableString stringWithString:@"user/113147664993405565981/albumid/5654736637546511265"];
 			break;
 			
-		case GOOGLE_DRIVE_USER_ABOUT:
-			aString = [NSMutableString stringWithString:@"about"];
+		case PICASA_USER_ABOUT:
+			aString = [NSMutableString stringWithString:@"user/113147664993405565981"];
 			break;
 			
-		case GOOGLE_DRIVE_USER_APPS:
+		case PICASA_USER_APPS:
 			aString = [NSMutableString stringWithString:@"apps"];
 			break;
 			

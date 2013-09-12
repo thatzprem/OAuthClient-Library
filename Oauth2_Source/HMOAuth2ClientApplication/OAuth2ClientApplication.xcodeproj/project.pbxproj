@@ -11,12 +11,29 @@
 		3B29FC2B17495E550000F82D /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B29FC2917495E540000F82D /* HomeTableViewController.m */; };
 		3B29FC2C17495E550000F82D /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29FC2A17495E550000F82D /* HomeTableViewController.xib */; };
 		3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */; };
-		3B502A86172143A30036CEED /* OAuth2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA537172003F900D71469 /* OAuth2Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5C39FF17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5C39FD17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h */; };
 		3B5C3A0017DF1C3F00FA6D0F /* NSDate+NSDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C39FE17DF1C3F00FA6D0F /* NSDate+NSDateUtility.m */; };
 		3B5C3A0417DF40E800FA6D0F /* PlistHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */; };
 		3B5C3A0517DF40E800FA6D0F /* PlistHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C3A0317DF40E800FA6D0F /* PlistHelper.m */; };
+		3B71929917E1993500922B6A /* OAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B71929217E1993500922B6A /* OAuth2ClientDelegate.h */; };
+		3B71929A17E1993500922B6A /* OAuth2AccessToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B71929317E1993500922B6A /* OAuth2AccessToken.h */; };
+		3B71929B17E1993500922B6A /* OAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71929417E1993500922B6A /* OAuth2AccessToken.m */; };
+		3B71929C17E1993500922B6A /* OAuth2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B71929517E1993500922B6A /* OAuth2Client.h */; };
+		3B71929D17E1993500922B6A /* OAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71929617E1993500922B6A /* OAuth2Client.m */; };
+		3B71929E17E1993500922B6A /* OAuth2ClientURLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B71929717E1993500922B6A /* OAuth2ClientURLRequestOperation.h */; };
+		3B71929F17E1993500922B6A /* OAuth2ClientURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71929817E1993500922B6A /* OAuth2ClientURLRequestOperation.m */; };
+		3B7192AD17E1995F00922B6A /* FaceBookConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7192A117E1995F00922B6A /* FaceBookConnector.h */; };
+		3B7192AE17E1995F00922B6A /* FaceBookConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7192A217E1995F00922B6A /* FaceBookConnector.m */; };
+		3B7192AF17E1995F00922B6A /* GoogleConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7192A317E1995F00922B6A /* GoogleConnector.h */; };
+		3B7192B017E1995F00922B6A /* GoogleConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7192A417E1995F00922B6A /* GoogleConnector.m */; };
+		3B7192B117E1995F00922B6A /* GoogleDriveConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7192A517E1995F00922B6A /* GoogleDriveConnector.h */; };
+		3B7192B217E1995F00922B6A /* GoogleDriveConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7192A617E1995F00922B6A /* GoogleDriveConnector.m */; };
+		3B7192B317E1995F00922B6A /* InstagramConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7192A717E1995F00922B6A /* InstagramConnector.h */; };
+		3B7192B417E1995F00922B6A /* InstagramConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7192A817E1995F00922B6A /* InstagramConnector.m */; };
+		3B7192B517E1995F00922B6A /* PicasaConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7192A917E1995F00922B6A /* PicasaConnector.h */; };
+		3B7192B617E1995F00922B6A /* PicasaConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7192AA17E1995F00922B6A /* PicasaConnector.m */; };
+		3B7192B717E1995F00922B6A /* SkyDriveConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7192AB17E1995F00922B6A /* SkyDriveConnector.h */; };
+		3B7192B817E1995F00922B6A /* SkyDriveConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7192AC17E1995F00922B6A /* SkyDriveConnector.m */; };
 		3B7FA4FF172000A100D71469 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA4FE172000A100D71469 /* UIKit.framework */; };
 		3B7FA501172000A100D71469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA500172000A100D71469 /* Foundation.framework */; };
 		3B7FA503172000A100D71469 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA502172000A100D71469 /* CoreGraphics.framework */; };
@@ -30,12 +47,6 @@
 		3B7FA51B172000A100D71469 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA519172000A100D71469 /* ViewController.xib */; };
 		3B7FA51E172000A100D71469 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA51C172000A100D71469 /* ViewController_iPad.xib */; };
 		3B7FA529172000BA00D71469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA500172000A100D71469 /* Foundation.framework */; };
-		3B7FA53C172003F900D71469 /* OAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA536172003F900D71469 /* OAuth2AccessToken.m */; };
-		3B7FA53D172003F900D71469 /* OAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA536172003F900D71469 /* OAuth2AccessToken.m */; };
-		3B7FA53E172003F900D71469 /* OAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA538172003F900D71469 /* OAuth2Client.m */; };
-		3B7FA53F172003F900D71469 /* OAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA538172003F900D71469 /* OAuth2Client.m */; };
-		3B7FA540172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */; };
-		3B7FA541172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */; };
 		3B7FA5491720045900D71469 /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */; };
 		3B7FA54A1720045900D71469 /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */; };
 		3B7FA54B1720045900D71469 /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5461720045900D71469 /* NSString+QueryString.m */; };
@@ -43,23 +54,11 @@
 		3B7FA54D1720045900D71469 /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */; };
 		3B7FA54E1720045900D71469 /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */; };
 		3B7FA54F17200A6C00D71469 /* libHMOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */; };
-		3B843FE61745141B005E21C1 /* FaceBookConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B843FE21745141B005E21C1 /* FaceBookConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B843FE71745141B005E21C1 /* FaceBookConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B843FE31745141B005E21C1 /* FaceBookConnector.m */; };
-		3B843FE81745141B005E21C1 /* InstagramConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B843FE41745141B005E21C1 /* InstagramConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B843FE91745141B005E21C1 /* InstagramConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B843FE51745141B005E21C1 /* InstagramConnector.m */; };
 		3B843FEB17451557005E21C1 /* InstagramOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B843FEA17451557005E21C1 /* InstagramOAuth2ClientConfig.plist */; };
 		3B843FEF17451865005E21C1 /* FacebookOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B843FEE17451865005E21C1 /* FacebookOAuth2ClientConfig.plist */; };
-		3B918D03177A056300E9F66B /* GoogleDriveConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B918D01177A056300E9F66B /* GoogleDriveConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B918D04177A056300E9F66B /* GoogleDriveConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B918D02177A056300E9F66B /* GoogleDriveConnector.m */; };
 		3B918D06177A05F700E9F66B /* GoogleDriveOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B918D05177A05F700E9F66B /* GoogleDriveOAuth2ClientConfig.plist */; };
 		3BAC41AC177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC41AB177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist */; };
-		3BAC41AF177B784B00DE7BE9 /* PicasaConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BAC41B0177B784B00DE7BE9 /* PicasaConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */; };
-		3BC93FB017469E5500746C4D /* GoogleConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC93FAE17469E5500746C4D /* GoogleConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BC93FB117469E5500746C4D /* GoogleConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC93FAF17469E5500746C4D /* GoogleConnector.m */; };
 		3BC93FB317469F9400746C4D /* GoogleOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BC93FB217469F9400746C4D /* GoogleOAuth2ClientConfig.plist */; };
-		3BD20AEF17D8619900C9C510 /* SkyDriveConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BD20AF017D8619900C9C510 /* SkyDriveConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */; };
 		3BD20AF217D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD20AF117D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +84,25 @@
 		3B5C39FE17DF1C3F00FA6D0F /* NSDate+NSDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDateUtility.m"; sourceTree = "<group>"; };
 		3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistHelper.h; sourceTree = "<group>"; };
 		3B5C3A0317DF40E800FA6D0F /* PlistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistHelper.m; sourceTree = "<group>"; };
+		3B71929217E1993500922B6A /* OAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2ClientDelegate.h; sourceTree = "<group>"; };
+		3B71929317E1993500922B6A /* OAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2AccessToken.h; sourceTree = "<group>"; };
+		3B71929417E1993500922B6A /* OAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2AccessToken.m; sourceTree = "<group>"; };
+		3B71929517E1993500922B6A /* OAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2Client.h; sourceTree = "<group>"; };
+		3B71929617E1993500922B6A /* OAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2Client.m; sourceTree = "<group>"; };
+		3B71929717E1993500922B6A /* OAuth2ClientURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2ClientURLRequestOperation.h; sourceTree = "<group>"; };
+		3B71929817E1993500922B6A /* OAuth2ClientURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth2ClientURLRequestOperation.m; sourceTree = "<group>"; };
+		3B7192A117E1995F00922B6A /* FaceBookConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookConnector.h; sourceTree = "<group>"; };
+		3B7192A217E1995F00922B6A /* FaceBookConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookConnector.m; sourceTree = "<group>"; };
+		3B7192A317E1995F00922B6A /* GoogleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleConnector.h; sourceTree = "<group>"; };
+		3B7192A417E1995F00922B6A /* GoogleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleConnector.m; sourceTree = "<group>"; };
+		3B7192A517E1995F00922B6A /* GoogleDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDriveConnector.h; sourceTree = "<group>"; };
+		3B7192A617E1995F00922B6A /* GoogleDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDriveConnector.m; sourceTree = "<group>"; };
+		3B7192A717E1995F00922B6A /* InstagramConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramConnector.h; sourceTree = "<group>"; };
+		3B7192A817E1995F00922B6A /* InstagramConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramConnector.m; sourceTree = "<group>"; };
+		3B7192A917E1995F00922B6A /* PicasaConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicasaConnector.h; sourceTree = "<group>"; };
+		3B7192AA17E1995F00922B6A /* PicasaConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicasaConnector.m; sourceTree = "<group>"; };
+		3B7192AB17E1995F00922B6A /* SkyDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyDriveConnector.h; sourceTree = "<group>"; };
+		3B7192AC17E1995F00922B6A /* SkyDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyDriveConnector.m; sourceTree = "<group>"; };
 		3B7FA4FB172000A100D71469 /* OAuth2ClientApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuth2ClientApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7FA4FE172000A100D71469 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B7FA500172000A100D71469 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,36 +122,17 @@
 		3B7FA51D172000A100D71469 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		3B7FA528172000BA00D71469 /* libHMOAuth2Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHMOAuth2Client.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7FA52C172000BA00D71469 /* HMOAuth2Client-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMOAuth2Client-Prefix.pch"; sourceTree = "<group>"; };
-		3B7FA535172003F900D71469 /* OAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2AccessToken.h; path = ../OAuth2AccessToken.h; sourceTree = "<group>"; };
-		3B7FA536172003F900D71469 /* OAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth2AccessToken.m; path = ../OAuth2AccessToken.m; sourceTree = "<group>"; };
-		3B7FA537172003F900D71469 /* OAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2Client.h; path = ../OAuth2Client.h; sourceTree = "<group>"; };
-		3B7FA538172003F900D71469 /* OAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OAuth2Client.m; path = ../OAuth2Client.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LROAuth2ClientDelegate.h; path = ../LROAuth2ClientDelegate.h; sourceTree = "<group>"; };
-		3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2ClientURLRequestOperation.h; path = ../OAuth2ClientURLRequestOperation.h; sourceTree = "<group>"; };
-		3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth2ClientURLRequestOperation.m; path = ../OAuth2ClientURLRequestOperation.m; sourceTree = "<group>"; };
 		3B7FA5431720045900D71469 /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
 		3B7FA5441720045900D71469 /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
 		3B7FA5451720045900D71469 /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
 		3B7FA5461720045900D71469 /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
 		3B7FA5471720045900D71469 /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
 		3B7FA5481720045900D71469 /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
-		3B843FE21745141B005E21C1 /* FaceBookConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceBookConnector.h; path = ../FaceBookConnector.h; sourceTree = "<group>"; };
-		3B843FE31745141B005E21C1 /* FaceBookConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = FaceBookConnector.m; path = ../FaceBookConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		3B843FE41745141B005E21C1 /* InstagramConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramConnector.h; path = ../InstagramConnector.h; sourceTree = "<group>"; };
-		3B843FE51745141B005E21C1 /* InstagramConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InstagramConnector.m; path = ../InstagramConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3B843FEA17451557005E21C1 /* InstagramOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InstagramOAuth2ClientConfig.plist; sourceTree = "<group>"; };
 		3B843FEE17451865005E21C1 /* FacebookOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FacebookOAuth2ClientConfig.plist; sourceTree = "<group>"; };
-		3B918D01177A056300E9F66B /* GoogleDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleDriveConnector.h; path = ../GoogleDriveConnector.h; sourceTree = "<group>"; };
-		3B918D02177A056300E9F66B /* GoogleDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleDriveConnector.m; path = ../GoogleDriveConnector.m; sourceTree = "<group>"; };
 		3B918D05177A05F700E9F66B /* GoogleDriveOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleDriveOAuth2ClientConfig.plist; sourceTree = "<group>"; };
 		3BAC41AB177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PicasaOAuth2ClientConfig.plist; sourceTree = "<group>"; };
-		3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PicasaConnector.h; path = ../PicasaConnector.h; sourceTree = "<group>"; };
-		3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PicasaConnector.m; path = ../PicasaConnector.m; sourceTree = "<group>"; };
-		3BC93FAE17469E5500746C4D /* GoogleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleConnector.h; path = ../GoogleConnector.h; sourceTree = "<group>"; };
-		3BC93FAF17469E5500746C4D /* GoogleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GoogleConnector.m; path = ../GoogleConnector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3BC93FB217469F9400746C4D /* GoogleOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleOAuth2ClientConfig.plist; sourceTree = "<group>"; };
-		3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkyDriveConnector.h; path = ../SkyDriveConnector.h; sourceTree = "<group>"; };
-		3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkyDriveConnector.m; path = ../SkyDriveConnector.m; sourceTree = "<group>"; };
 		3BD20AF117D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkyDriveOAuth2ClientConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,40 +159,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B5C39F317DEE20400FA6D0F /* Connectors */ = {
-			isa = PBXGroup;
-			children = (
-				3B918D01177A056300E9F66B /* GoogleDriveConnector.h */,
-				3B918D02177A056300E9F66B /* GoogleDriveConnector.m */,
-				3B843FE21745141B005E21C1 /* FaceBookConnector.h */,
-				3B843FE31745141B005E21C1 /* FaceBookConnector.m */,
-				3B843FE41745141B005E21C1 /* InstagramConnector.h */,
-				3B843FE51745141B005E21C1 /* InstagramConnector.m */,
-				3BC93FAE17469E5500746C4D /* GoogleConnector.h */,
-				3BC93FAF17469E5500746C4D /* GoogleConnector.m */,
-				3BAC41AD177B784B00DE7BE9 /* PicasaConnector.h */,
-				3BAC41AE177B784B00DE7BE9 /* PicasaConnector.m */,
-				3BD20AED17D8619900C9C510 /* SkyDriveConnector.h */,
-				3BD20AEE17D8619900C9C510 /* SkyDriveConnector.m */,
-			);
-			path = Connectors;
-			sourceTree = "<group>";
-		};
-		3B5C39F417DEE24000FA6D0F /* OAuthSource */ = {
-			isa = PBXGroup;
-			children = (
-				3B7FA535172003F900D71469 /* OAuth2AccessToken.h */,
-				3B7FA536172003F900D71469 /* OAuth2AccessToken.m */,
-				3B7FA537172003F900D71469 /* OAuth2Client.h */,
-				3B7FA538172003F900D71469 /* OAuth2Client.m */,
-				3B7FA539172003F900D71469 /* LROAuth2ClientDelegate.h */,
-				3B7FA53A172003F900D71469 /* OAuth2ClientURLRequestOperation.h */,
-				3B7FA53B172003F900D71469 /* OAuth2ClientURLRequestOperation.m */,
-			);
-			name = OAuthSource;
-			path = OAuthSources;
-			sourceTree = "<group>";
-		};
 		3B5C39F617DEE28900FA6D0F /* ConnectorConfigFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +231,39 @@
 			);
 			name = PlistHelper;
 			path = Classes/Utils/PlistHelper;
+			sourceTree = "<group>";
+		};
+		3B71929117E1993500922B6A /* OAuthSource */ = {
+			isa = PBXGroup;
+			children = (
+				3B71929217E1993500922B6A /* OAuth2ClientDelegate.h */,
+				3B71929317E1993500922B6A /* OAuth2AccessToken.h */,
+				3B71929417E1993500922B6A /* OAuth2AccessToken.m */,
+				3B71929517E1993500922B6A /* OAuth2Client.h */,
+				3B71929617E1993500922B6A /* OAuth2Client.m */,
+				3B71929717E1993500922B6A /* OAuth2ClientURLRequestOperation.h */,
+				3B71929817E1993500922B6A /* OAuth2ClientURLRequestOperation.m */,
+			);
+			path = OAuthSource;
+			sourceTree = "<group>";
+		};
+		3B7192A017E1995F00922B6A /* Connectors */ = {
+			isa = PBXGroup;
+			children = (
+				3B7192A117E1995F00922B6A /* FaceBookConnector.h */,
+				3B7192A217E1995F00922B6A /* FaceBookConnector.m */,
+				3B7192A317E1995F00922B6A /* GoogleConnector.h */,
+				3B7192A417E1995F00922B6A /* GoogleConnector.m */,
+				3B7192A517E1995F00922B6A /* GoogleDriveConnector.h */,
+				3B7192A617E1995F00922B6A /* GoogleDriveConnector.m */,
+				3B7192A717E1995F00922B6A /* InstagramConnector.h */,
+				3B7192A817E1995F00922B6A /* InstagramConnector.m */,
+				3B7192A917E1995F00922B6A /* PicasaConnector.h */,
+				3B7192AA17E1995F00922B6A /* PicasaConnector.m */,
+				3B7192AB17E1995F00922B6A /* SkyDriveConnector.h */,
+				3B7192AC17E1995F00922B6A /* SkyDriveConnector.m */,
+			);
+			path = Connectors;
 			sourceTree = "<group>";
 		};
 		3B7FA4F2172000A100D71469 = {
@@ -345,8 +343,8 @@
 		3B7FA534172003F900D71469 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3B5C39F417DEE24000FA6D0F /* OAuthSource */,
-				3B5C39F317DEE20400FA6D0F /* Connectors */,
+				3B7192A017E1995F00922B6A /* Connectors */,
+				3B71929117E1993500922B6A /* OAuthSource */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -375,16 +373,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B149A14172D06110021B797 /* OAuthConstants.h in Headers */,
-				3B843FE61745141B005E21C1 /* FaceBookConnector.h in Headers */,
-				3BAC41AF177B784B00DE7BE9 /* PicasaConnector.h in Headers */,
-				3BD20AEF17D8619900C9C510 /* SkyDriveConnector.h in Headers */,
-				3B918D03177A056300E9F66B /* GoogleDriveConnector.h in Headers */,
-				3B843FE81745141B005E21C1 /* InstagramConnector.h in Headers */,
-				3BC93FB017469E5500746C4D /* GoogleConnector.h in Headers */,
-				3B502A86172143A30036CEED /* OAuth2Client.h in Headers */,
-				3B502A87172143A60036CEED /* LROAuth2ClientDelegate.h in Headers */,
 				3B5C39FF17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h in Headers */,
 				3B5C3A0417DF40E800FA6D0F /* PlistHelper.h in Headers */,
+				3B71929917E1993500922B6A /* OAuth2ClientDelegate.h in Headers */,
+				3B71929A17E1993500922B6A /* OAuth2AccessToken.h in Headers */,
+				3B71929C17E1993500922B6A /* OAuth2Client.h in Headers */,
+				3B71929E17E1993500922B6A /* OAuth2ClientURLRequestOperation.h in Headers */,
+				3B7192AD17E1995F00922B6A /* FaceBookConnector.h in Headers */,
+				3B7192AF17E1995F00922B6A /* GoogleConnector.h in Headers */,
+				3B7192B117E1995F00922B6A /* GoogleDriveConnector.h in Headers */,
+				3B7192B317E1995F00922B6A /* InstagramConnector.h in Headers */,
+				3B7192B517E1995F00922B6A /* PicasaConnector.h in Headers */,
+				3B7192B717E1995F00922B6A /* SkyDriveConnector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,9 +503,6 @@
 				3B7FA50B172000A100D71469 /* main.m in Sources */,
 				3B7FA50F172000A100D71469 /* AppDelegate.m in Sources */,
 				3B7FA518172000A100D71469 /* ViewController.m in Sources */,
-				3B7FA53C172003F900D71469 /* OAuth2AccessToken.m in Sources */,
-				3B7FA53E172003F900D71469 /* OAuth2Client.m in Sources */,
-				3B7FA540172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */,
 				3B7FA5491720045900D71469 /* NSDictionary+QueryString.m in Sources */,
 				3B7FA54B1720045900D71469 /* NSString+QueryString.m in Sources */,
 				3B7FA54D1720045900D71469 /* NSURL+QueryInspector.m in Sources */,
@@ -517,20 +514,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7FA53D172003F900D71469 /* OAuth2AccessToken.m in Sources */,
-				3B7FA53F172003F900D71469 /* OAuth2Client.m in Sources */,
-				3B7FA541172003F900D71469 /* OAuth2ClientURLRequestOperation.m in Sources */,
 				3B7FA54A1720045900D71469 /* NSDictionary+QueryString.m in Sources */,
 				3B7FA54C1720045900D71469 /* NSString+QueryString.m in Sources */,
 				3B7FA54E1720045900D71469 /* NSURL+QueryInspector.m in Sources */,
-				3B843FE71745141B005E21C1 /* FaceBookConnector.m in Sources */,
-				3B843FE91745141B005E21C1 /* InstagramConnector.m in Sources */,
-				3BC93FB117469E5500746C4D /* GoogleConnector.m in Sources */,
-				3B918D04177A056300E9F66B /* GoogleDriveConnector.m in Sources */,
-				3BAC41B0177B784B00DE7BE9 /* PicasaConnector.m in Sources */,
-				3BD20AF017D8619900C9C510 /* SkyDriveConnector.m in Sources */,
 				3B5C3A0017DF1C3F00FA6D0F /* NSDate+NSDateUtility.m in Sources */,
 				3B5C3A0517DF40E800FA6D0F /* PlistHelper.m in Sources */,
+				3B71929B17E1993500922B6A /* OAuth2AccessToken.m in Sources */,
+				3B71929D17E1993500922B6A /* OAuth2Client.m in Sources */,
+				3B71929F17E1993500922B6A /* OAuth2ClientURLRequestOperation.m in Sources */,
+				3B7192AE17E1995F00922B6A /* FaceBookConnector.m in Sources */,
+				3B7192B017E1995F00922B6A /* GoogleConnector.m in Sources */,
+				3B7192B217E1995F00922B6A /* GoogleDriveConnector.m in Sources */,
+				3B7192B417E1995F00922B6A /* InstagramConnector.m in Sources */,
+				3B7192B617E1995F00922B6A /* PicasaConnector.m in Sources */,
+				3B7192B817E1995F00922B6A /* SkyDriveConnector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

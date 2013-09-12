@@ -9,8 +9,8 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "LROAuth2ClientDelegate.h"
-#import "LROAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
 
 @class OAuth2AccessToken;
 

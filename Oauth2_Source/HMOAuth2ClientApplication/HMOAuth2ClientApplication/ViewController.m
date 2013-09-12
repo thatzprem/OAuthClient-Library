@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "OAuth2Client.h"
-#import "LROAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
 #import "InstagramConnector.h"
 #import "FaceBookConnector.h"
 #import "GoogleConnector.h"

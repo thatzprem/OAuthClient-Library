@@ -1,32 +1,42 @@
 //
-//  SkyDriveConnector.m
+//  GoogleConnector.m
 //  OAuth2ClientApplication
 //
-//  Created by Prem kumar on 05/09/13.
-//  Copyright (c) 2013 NexTip. All rights reserved.
+//  Created by Prem kumar on 17/05/13.
+//  Copyright (c) 2013 NexTip . All rights reserved.
 //
 
-#import "SkyDriveConnector.h"
+#import "GoogleConnector.h"
+
 #import "OAuth2Client.h"
-#import "LROAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
 #import "NSDictionary+QueryString.h"
 
 
-#define kHostName @"https://apis.live.net/v5.0/me/skydrive/quota?"
+//https://www.googleapis.com/oauth2/v2/userinfo?access_token=ya29.AHES6ZRxPAcb4WznwIcbN69tAM28ctPMDjrVtOg6KyuCVmTZIWWG3Q
 
-@interface SkyDriveConnector()<OAuth2ClientDelegate>{
+
+
+#define kHostName @"https://www.googleapis.com/plus/v1"
+//#define kAbout @""
+//#define kFriendsList @"users/self/followed-by"
+//#define kPhotosList @"users/self/media/recent"
+
+
+@interface GoogleConnector()<OAuth2ClientDelegate>{
     
     OAuth2Client *oAuthClient;
     NSString *resourcePath;
     NSString *accessTokenString;
-    NSString *skyDriveID;
+    NSString *googleUserID;
     
 }
 
 @end
 
+@implementation GoogleConnector
 
-@implementation SkyDriveConnector
+
 
 - (id)initWithAuthorizingWebView:(UIWebView*)webView
 {
@@ -34,7 +44,7 @@
     if (self) {
         
         
-        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"SkyDriveOAuth2ClientConfig"];
+        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"GoogleOAuth2ClientConfig"];
         oAuthClient.delegate = self;
         
         NSError *error;
@@ -46,27 +56,28 @@
 }
 
 
-- (NSURL*)getDataForSkyDriveAPI:(SKYDRIVE_USER_API)api
+- (NSURL*)getDataForGoogleAPI:(GOOGLE_USER_API)api
 {
     
-//    resourcePath = [self getResourcePathForAPI:api];
-    
+    resourcePath = [self getResourcePathForAPI:api];
     
     if (!accessTokenString) {
+//        [[HMLogManager getSharedInstance] error:@"Access Token is nil..."];
+        
         return nil;
     }
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",kHostName]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",kHostName,resourcePath]];
     NSLog(@"%@",url);
     
     NSDictionary *accessCodeParams = [NSMutableDictionary dictionary];
     [accessCodeParams setValue:accessTokenString forKey:@"access_token"];
     
-    NSString *urlString = [[url absoluteString] stringByAppendingFormat:@"access_token=%@",accessTokenString];
+    NSString *urlString = [[url absoluteString] stringByAppendingFormat:@"?access_token=%@",accessTokenString];
     
     NSURL *fullURL = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
-    NSLog(@"API URL = %@",url);
+    NSLog(@"API URL = %@",fullURL);
     
     return fullURL;
     
@@ -79,8 +90,8 @@
     NSLog(@"access Token string = %@",accessTokenString);
     
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://apis.live.net/v5.0/me/skydrive/quota?access_token=%@",accessTokenString]];
-    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.googleapis.com/oauth2/v2/userinfo?access_token=%@",accessTokenString]];
+
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url
                                                 cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                             timeoutInterval:30];
@@ -102,41 +113,40 @@
                                       error:&error];
     NSLog(@"Received Json UserID data  = %@",json);
     
-    skyDriveID = [json objectForKey:@"id"];
+    googleUserID = [json objectForKey:@"id"];
     
     
-    NSLog(@"skyDriveID: %@", skyDriveID);
+    NSLog(@"googleUserID: %@", googleUserID);
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"skyDriveSuccessNotification" object:nil];
-    
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"googleSuccessNotification" object:nil];
+
+        
     
 }
 - (void)oauthClientDidRefreshAccessToken:(OAuth2Client *)client{
     
-    //    NSString *accessTokenString = [NSString stringWithFormat:@"%@",client.accessToken];
-    //    NSLog(@"Refreshed Token string = %@",accessTokenString);
+//    NSString *accessTokenString = [NSString stringWithFormat:@"%@",client.accessToken];
+//    NSLog(@"Refreshed Token string = %@",accessTokenString);
     
 }
 
 
-- (NSString *)getResourcePathForAPI:(SKYDRIVE_USER_API)iApi {
+- (NSString *)getResourcePathForAPI:(GOOGLE_USER_API)iApi {
 	NSMutableString *aString;
 	
 	switch (iApi) {
             
 			
-		case SKYDRIVE_USER_CHANGES:
-            
-			aString = [NSMutableString stringWithString:@"user/113147664993405565981/albumid/5654736637546511265"];
+		case GOOGLE_USER_FRIENDS:
+			aString = [NSMutableString stringWithFormat:@"people/%@/people/visible",googleUserID];
 			break;
 			
-		case SKYDRIVE_USER_ABOUT:
-			aString = [NSMutableString stringWithString:@"user/113147664993405565981"];
+		case GOOGLE_USER_ABOUT:
+			aString = [NSMutableString stringWithFormat:@"people/%@",googleUserID];
 			break;
 			
-		case SKYDRIVE_USER_APPS:
-			aString = [NSMutableString stringWithString:@"apps"];
+		case GOOGLE_USER_MOMENTS:
+			aString = [NSMutableString stringWithFormat:@"people/%@/moments/vault",googleUserID];
 			break;
 			
 		default:

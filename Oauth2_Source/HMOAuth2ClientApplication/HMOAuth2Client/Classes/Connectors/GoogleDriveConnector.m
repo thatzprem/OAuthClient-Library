@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 NexTip . All rights reserved.
 //
 
-#import "GoogleConnector.h"
+#import "GoogleDriveConnector.h"
 
 #import "OAuth2Client.h"
-#import "LROAuth2ClientDelegate.h"
+#import "OAuth2ClientDelegate.h"
 #import "NSDictionary+QueryString.h"
 
 
@@ -17,13 +17,13 @@
 
 
 
-#define kHostName @"https://www.googleapis.com/plus/v1"
+#define kHostName @"https://www.googleapis.com/drive/v2"
 //#define kAbout @""
 //#define kFriendsList @"users/self/followed-by"
 //#define kPhotosList @"users/self/media/recent"
 
 
-@interface GoogleConnector()<OAuth2ClientDelegate>{
+@interface GoogleDriveConnector()<OAuth2ClientDelegate>{
     
     OAuth2Client *oAuthClient;
     NSString *resourcePath;
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation GoogleConnector
+@implementation GoogleDriveConnector
 
 
 
@@ -43,8 +43,7 @@
     self = [super init];
     if (self) {
         
-        
-        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"GoogleOAuth2ClientConfig"];
+        oAuthClient = [[OAuth2Client alloc] initOAuth2ClientComponentWithConfigFileName:@"GoogleDriveOAuth2ClientConfig"];
         oAuthClient.delegate = self;
         
         NSError *error;
@@ -56,14 +55,14 @@
 }
 
 
-- (NSURL*)getDataForGoogleAPI:(GOOGLE_USER_API)api
+- (NSURL*)getDataForGoogleDriveAPI:(GOOGLE_DRIVE_USER_API)api
 {
     
     resourcePath = [self getResourcePathForAPI:api];
     
     if (!accessTokenString) {
-//        [[HMLogManager getSharedInstance] error:@"Access Token is nil..."];
-        
+
+        NSLog(@"Access token is nil...");
         return nil;
     }
     
@@ -118,7 +117,7 @@
     
     NSLog(@"googleUserID: %@", googleUserID);
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"googleSuccessNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"googleDriveSuccessNotification" object:nil];
 
         
     
@@ -131,22 +130,22 @@
 }
 
 
-- (NSString *)getResourcePathForAPI:(GOOGLE_USER_API)iApi {
+- (NSString *)getResourcePathForAPI:(GOOGLE_DRIVE_USER_API)iApi {
 	NSMutableString *aString;
 	
 	switch (iApi) {
             
 			
-		case GOOGLE_USER_FRIENDS:
-			aString = [NSMutableString stringWithFormat:@"people/%@/people/visible",googleUserID];
+		case GOOGLE_DRIVE_USER_CHANGES:
+			aString = [NSMutableString stringWithString:@"changes"];
 			break;
 			
-		case GOOGLE_USER_ABOUT:
-			aString = [NSMutableString stringWithFormat:@"people/%@",googleUserID];
+		case GOOGLE_DRIVE_USER_ABOUT:
+			aString = [NSMutableString stringWithString:@"about"];
 			break;
 			
-		case GOOGLE_USER_MOMENTS:
-			aString = [NSMutableString stringWithFormat:@"people/%@/moments/vault",googleUserID];
+		case GOOGLE_DRIVE_USER_APPS:
+			aString = [NSMutableString stringWithString:@"apps"];
 			break;
 			
 		default:
