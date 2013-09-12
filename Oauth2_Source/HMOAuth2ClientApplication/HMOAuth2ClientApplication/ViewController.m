@@ -1,6 +1,6 @@
 //
-//  HMViewController.m
-//  HMOAuth2ClientApplication
+//    ViewController.m
+//    OAuth2ClientApplication
 //
 //  Created by Prem kumar on 18/04/13.
 //  Copyright (c) 2013 NexTip . All rights reserved.

@@ -52,9 +52,7 @@
     
     [self setAuthResponseData:tokenData];
     [self extractExpiresAtFromResponse];
-    
-//    HMLogger_LogableObject_Debug(self);
-    
+        
 }
 
 - (void)extractExpiresAtFromResponse

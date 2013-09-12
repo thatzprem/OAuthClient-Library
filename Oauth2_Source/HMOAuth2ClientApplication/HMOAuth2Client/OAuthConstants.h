@@ -1,6 +1,6 @@
 //
-//  HMOAuthConstants.h
-//  HMOAuth2ClientApplication
+//    OAuthConstants.h
+//    OAuth2ClientApplication
 //
 //  Created by Prem kumar on 28/04/13.
 //  Copyright (c) 2013 NexTip . All rights reserved.
@@ -14,8 +14,6 @@
 /**
  General OAuth-Component configurations.
  */
-
-#define OAUTH2_CONFIG_FILENAME  @"HMOAuth2ClientConfig"
 
 #define OAUTH2_CONFIG_FILE_EXTENSION  @"plist"
 

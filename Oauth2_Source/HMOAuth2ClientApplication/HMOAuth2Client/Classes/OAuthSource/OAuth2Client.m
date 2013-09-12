@@ -257,10 +257,6 @@
 //TODO: Refresh access token feature implementation is in progress....
 - (void)refreshAccessToken:(OAuth2AccessToken *)_accessToken additionalParameters:(NSDictionary *)additionalParameters serviceProviderID:(int)serviceProvider;
 {
-
-    
-//    [[HMLogManager getSharedInstance] info:@"REFRESHING ACCESS TOKEN..."];
-//    [[HMLogManager getSharedInstance] debugWithLoggableObject:_accessToken];
     
     
     //Forming the refresh POST URL.
@@ -282,8 +278,6 @@
   [request setHTTPMethod:@"POST"];
   [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
   [request setHTTPBody:[[params stringWithFormEncodedComponents] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-//    [[HMLogManager getSharedInstance] debug:@"Refresh token request URL:%@",request];
     
   OAuth2ClientURLRequestOperation *operation = [[OAuth2ClientURLRequestOperation alloc] initWithURLRequest:request];
   
@@ -443,9 +437,7 @@
         NSLog(@"Adding access token in acessToken object...");
 
         accessToken = [[OAuth2AccessToken alloc] initWithAuthorizationResponse:authDataInDictionary];
-    
-//        HMLogger_LogableObject_Debug(accessToken);
-        
+            
         if ([self.delegate respondsToSelector:@selector(oauthClientDidReceiveAccessToken:)]) {
             NSLog(@"Notifying through oauthClientDidReceiveAccessToken...");
             [self.delegate oauthClientDidReceiveAccessToken:accessToken.accessToken];

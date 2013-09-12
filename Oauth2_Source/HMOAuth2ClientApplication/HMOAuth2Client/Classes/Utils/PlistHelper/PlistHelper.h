@@ -1,5 +1,5 @@
 //
-//  HMPlistHelper.h
+//    PlistHelper.h
 //  Logger
 //
 /** Created by Prem on 14/03/13.

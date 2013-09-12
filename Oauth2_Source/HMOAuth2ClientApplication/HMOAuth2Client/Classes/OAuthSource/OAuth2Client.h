@@ -85,7 +85,7 @@
 @property (nonatomic, assign) BOOL debug;
 
 /**
- 1. Initialize the OAuth component with the details of the HMOAuth2ClientConfig dictionary.
+ 1. Initialize the OAuth component with the details of the     OAuth2ClientConfig dictionary.
  2. Set the class properties with the values of the dictionary.
  @return retun the self contained class object.
  */

@@ -1,5 +1,5 @@
 //
-//  HMPlistHelper.m
+//    PlistHelper.m
 //  Logger
 //
 /** Created by Prem on 14/03/13.
@@ -35,7 +35,7 @@
             return  [[NSFileManager defaultManager] copyItemAtPath:itemtoCopy toPath:[[self docDirectoryPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@",resourceName,resourceType]] error:nil];
         }
         @catch (NSException *exception) {
-            NSLog(@"HMLOGGER INITIALIZING EXCEPTION: ERROR COPYING THE CONFIG FILE TO DOC DIRECTORY");
+            NSLog(@"  LOGGER INITIALIZING EXCEPTION: ERROR COPYING THE CONFIG FILE TO DOC DIRECTORY");
         }
         @finally {
             
@@ -44,7 +44,7 @@
     }
     else
     {
-        NSLog(@"HMLOGGER INITIALIZING ERROR: COULD NOT LOCATE THE SPECIFIED HMLOGGER CONFIG FILE ");
+        NSLog(@"  LOGGER INITIALIZING ERROR: COULD NOT LOCATE THE SPECIFIED   LOGGER CONFIG FILE ");
         return NO;
     }
 }
@@ -59,7 +59,7 @@
     }
     @catch (NSException *exception) {
         
-        NSLog(@"HMLOGGER INITIALIZING EXCEPTION : ERROR RETREVING DATA FROM PLIST");
+        NSLog(@"  LOGGER INITIALIZING EXCEPTION : ERROR RETREVING DATA FROM PLIST");
     }
     @finally {
         

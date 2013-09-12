@@ -49,7 +49,6 @@
     resourcePath = [self getResourcePathForAPI:api];
     
     if (!accessTokenString) {
-//        [[HMLogManager getSharedInstance] error:@"Access Token is nil..."];
         
         return nil;
     }

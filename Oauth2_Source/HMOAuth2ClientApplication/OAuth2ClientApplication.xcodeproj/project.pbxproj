@@ -10,7 +10,6 @@
 		3B149A14172D06110021B797 /* OAuthConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B149A13172D06110021B797 /* OAuthConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B29FC2B17495E550000F82D /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B29FC2917495E540000F82D /* HomeTableViewController.m */; };
 		3B29FC2C17495E550000F82D /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29FC2A17495E550000F82D /* HomeTableViewController.xib */; };
-		3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */; };
 		3B5C39FF17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5C39FD17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h */; };
 		3B5C3A0017DF1C3F00FA6D0F /* NSDate+NSDateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C39FE17DF1C3F00FA6D0F /* NSDate+NSDateUtility.m */; };
 		3B5C3A0417DF40E800FA6D0F /* PlistHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */; };
@@ -79,7 +78,6 @@
 		3B29FC2817495E540000F82D /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = HomeTableViewController/HomeTableViewController.h; sourceTree = "<group>"; };
 		3B29FC2917495E540000F82D /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = HomeTableViewController/HomeTableViewController.m; sourceTree = "<group>"; };
 		3B29FC2A17495E550000F82D /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableViewController.xib; path = HomeTableViewController/HomeTableViewController.xib; sourceTree = "<group>"; };
-		3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LoggerConfig.plist; path = HMOAuth2Client/LoggerLib/LoggerConfig.plist; sourceTree = "<group>"; };
 		3B5C39FD17DF1C3F00FA6D0F /* NSDate+NSDateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDateUtility.h"; sourceTree = "<group>"; };
 		3B5C39FE17DF1C3F00FA6D0F /* NSDate+NSDateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDateUtility.m"; sourceTree = "<group>"; };
 		3B5C3A0217DF40E800FA6D0F /* PlistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistHelper.h; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 				3B918D05177A05F700E9F66B /* GoogleDriveOAuth2ClientConfig.plist */,
 				3BAC41AB177B77F000DE7BE9 /* PicasaOAuth2ClientConfig.plist */,
 				3BD20AF117D8630100C9C510 /* SkyDriveOAuth2ClientConfig.plist */,
-				3B3BD71B1728EBB4008D53DB /* LoggerConfig.plist */,
 			);
 			name = ConnectorConfigFiles;
 			path = ..;
@@ -466,7 +463,6 @@
 				3B7FA515172000A100D71469 /* Default-568h@2x.png in Resources */,
 				3B7FA51B172000A100D71469 /* ViewController.xib in Resources */,
 				3B7FA51E172000A100D71469 /* ViewController_iPad.xib in Resources */,
-				3B3BD71C1728EBB4008D53DB /* LoggerConfig.plist in Resources */,
 				3B843FEB17451557005E21C1 /* InstagramOAuth2ClientConfig.plist in Resources */,
 				3B843FEF17451865005E21C1 /* FacebookOAuth2ClientConfig.plist in Resources */,
 				3BC93FB317469F9400746C4D /* GoogleOAuth2ClientConfig.plist in Resources */,
